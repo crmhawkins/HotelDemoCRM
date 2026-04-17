@@ -356,7 +356,7 @@
                                                                                     @if ($limpieza->tipo_limpieza === 'zona_comun')
                                                                                         <span class="badge bg-info">Zona Común</span>
                                                                                     @else
-                                                                                        <span class="badge bg-primary">Apartamento</span>
+                                                                                        <span class="badge bg-primary">Habitación</span>
                                                                                     @endif
                                                                                 </div>
                                                                             </div>

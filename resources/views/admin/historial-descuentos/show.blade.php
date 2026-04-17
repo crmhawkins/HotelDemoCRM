@@ -27,7 +27,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h6 class="text-primary"><i class="fas fa-home me-2"></i>Apartamento</h6>
+                                    <h6 class="text-primary"><i class="fas fa-home me-2"></i>Habitación</h6>
                                     <p><strong>Nombre:</strong> {{ $historial->apartamento->nombre ?? 'N/A' }}</p>
                                     <p><strong>ID:</strong> {{ $historial->apartamento_id }}</p>
                                     @if($historial->apartamento && $historial->apartamento->id_channex)
@@ -56,7 +56,7 @@
                                     <h6 class="text-primary"><i class="fas fa-cog me-2"></i>Configuración</h6>
                                     @if($historial->configuracionDescuento)
                                         <p><strong>Nombre:</strong> {{ $historial->configuracionDescuento->nombre }}</p>
-                                        <p><strong>Edificio:</strong> {{ $historial->configuracionDescuento->edificio->nombre ?? 'N/A' }}</p>
+                                        <p><strong>Hotel:</strong> {{ $historial->configuracionDescuento->edificio->nombre ?? 'N/A' }}</p>
                                     @else
                                         <p><em>Sin configuración asociada</em></p>
                                     @endif
@@ -97,9 +97,9 @@
                                 @endphp
                                 
                                 <div class="mb-3">
-                                    <h6 class="text-primary"><i class="fas fa-building me-2"></i>Edificio</h6>
+                                    <h6 class="text-primary"><i class="fas fa-building me-2"></i>Hotel</h6>
                                     <p class="mb-1"><strong>Nombre:</strong> {{ $datos['edificio']['nombre'] ?? 'N/A' }}</p>
-                                    <p class="mb-1"><strong>Total Apartamentos:</strong> {{ $datos['edificio']['total_apartamentos'] ?? 'N/A' }}</p>
+                                    <p class="mb-1"><strong>Total Habitaciones:</strong> {{ $datos['edificio']['total_apartamentos'] ?? 'N/A' }}</p>
                                 </div>
 
                                 <div class="mb-3">
@@ -183,7 +183,7 @@
                                 <div class="col-md-6">
                                     <h6 class="text-primary">IDs de Referencia</h6>
                                     <p><strong>ID Historial:</strong> {{ $historial->id }}</p>
-                                    <p><strong>ID Apartamento:</strong> {{ $historial->apartamento_id }}</p>
+                                    <p><strong>ID Habitación:</strong> {{ $historial->apartamento_id }}</p>
                                     <p><strong>ID Tarifa:</strong> {{ $historial->tarifa_id ?? 'N/A' }}</p>
                                     <p><strong>ID Configuración:</strong> {{ $historial->configuracion_descuento_id ?? 'N/A' }}</p>
                                 </div>
@@ -240,10 +240,10 @@ function verDatosCompletos(historialId) {
                 <div style="text-align: left; font-size: 14px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div>
-                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-building me-2"></i>Información del Edificio</h6>
+                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-building me-2"></i>Información del Hotel</h6>
                             <ul style="list-style: none; padding: 0;">
                                 <li><strong>Nombre:</strong> ${datos.edificio.nombre}</li>
-                                <li><strong>Total Apartamentos:</strong> ${datos.edificio.total_apartamentos}</li>
+                                <li><strong>Total Habitaciones:</strong> ${datos.edificio.total_apartamentos}</li>
                             </ul>
                             
                             <h6 style="color: #007bff; margin: 15px 0 10px 0;"><i class="fas fa-cog me-2"></i>Configuración Aplicada</h6>
@@ -255,7 +255,7 @@ function verDatosCompletos(historialId) {
                         </div>
                         
                         <div>
-                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-home me-2"></i>Información del Apartamento</h6>
+                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-home me-2"></i>Información de la Habitación</h6>
                             <ul style="list-style: none; padding: 0;">
                                 <li><strong>Nombre:</strong> ${datos.apartamento.nombre}</li>
                                 <li><strong>ID Channex:</strong> ${datos.apartamento.id_channex || 'N/A'}</li>

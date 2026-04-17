@@ -671,7 +671,7 @@
                                 <thead>
                                     <tr>
                                         <th>Fecha</th>
-                                        <th>Apartamento</th>
+                                        <th>Habitación</th>
                                         <th>Precio</th>
                                         <th>Estado</th>
                                         <th>Acciones</th>

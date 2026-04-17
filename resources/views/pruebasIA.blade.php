@@ -95,7 +95,7 @@
 
 </head>
 <body>
-  <h3 class="text-center mt-4 mb-5 text-uppercase">Prueba del ChatBot de los Apartamentos</h3>
+  <h3 class="text-center mt-4 mb-5 text-uppercase">Prueba del ChatBot de las Habitaciones</h3>
   
   <!-- Botón para abrir el modal -->
   <button class="btn btn-primary text-center m-auto d-flex" data-bs-toggle="modal" data-bs-target="#instruccionesModal">Instrucciones</button>

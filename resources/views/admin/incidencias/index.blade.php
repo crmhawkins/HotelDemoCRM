@@ -109,7 +109,7 @@
                     <label for="tipo" class="form-label fw-semibold">Tipo</label>
                     <select name="tipo" id="tipo" class="form-select">
                         <option value="">Todos</option>
-                        <option value="apartamento" {{ $filtros['tipo'] == 'apartamento' ? 'selected' : '' }}>Apartamento</option>
+                        <option value="apartamento" {{ $filtros['tipo'] == 'apartamento' ? 'selected' : '' }}>Habitación</option>
                         <option value="zona_comun" {{ $filtros['tipo'] == 'zona_comun' ? 'selected' : '' }}>Zona Común</option>
                     </select>
                 </div>
@@ -234,7 +234,7 @@
                                     <td>
                                         @if($incidencia->tipo == 'apartamento')
                                             <span class="badge bg-info">
-                                                <i class="fas fa-home me-1"></i>Apartamento
+                                                <i class="fas fa-home me-1"></i>Habitación
                                             </span>
                                         @else
                                             <span class="badge bg-warning">

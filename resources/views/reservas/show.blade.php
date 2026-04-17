@@ -97,7 +97,7 @@
                         <i class="fas fa-building text-info"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1 fw-semibold">Apartamento</h6>
+                        <h6 class="mb-1 fw-semibold">Habitación</h6>
                         <p class="mb-0 text-muted">{{ $reserva->apartamento->titulo }}</p>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         <i class="fas fa-city text-secondary"></i>
                     </div>
                     <div>
-                        <h6 class="mb-1 fw-semibold">Edificio</h6>
+                        <h6 class="mb-1 fw-semibold">Hotel</h6>
                         <p class="mb-0 text-muted">{{ $reserva->apartamento->edificioName->nombre }}</p>
                     </div>
                 </div>

@@ -227,7 +227,7 @@
         <div class="about-content-grid">
             <div>
                 <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop" 
-                     alt="Interior de apartamento" 
+                     alt="Interior de habitación"
                      class="about-image about-image-large">
             </div>
             

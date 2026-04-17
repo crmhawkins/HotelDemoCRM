@@ -91,7 +91,7 @@
                                 <div class="info-value">
                                     @if($incidencia->tipo == 'apartamento')
                                         <span class="badge bg-info fs-6">
-                                            <i class="fas fa-home me-1"></i>Apartamento
+                                            <i class="fas fa-home me-1"></i>Habitación
                                         </span>
                                     @else
                                         <span class="badge bg-warning fs-6">
@@ -192,19 +192,19 @@
                         <div class="info-group mb-3">
                             <label class="form-label fw-semibold text-muted">Tipo</label>
                             <div class="info-value">
-                                <span class="badge bg-info">Apartamento</span>
+                                <span class="badge bg-info">Habitación</span>
                             </div>
                         </div>
                         <div class="info-group mb-3">
-                            <label class="form-label fw-semibold text-muted">Apartamento</label>
+                            <label class="form-label fw-semibold text-muted">Habitación</label>
                             <div class="info-value">
                                 <span class="badge bg-primary fs-6">{{ $incidencia->apartamento->nombre }}</span>
                             </div>
                         </div>
                         <div class="info-group mb-3">
-                            <label class="form-label fw-semibold text-muted">Edificio</label>
+                            <label class="form-label fw-semibold text-muted">Hotel</label>
                             <div class="info-value">
-                                {{ $incidencia->apartamento->edificio->nombre ?? 'Sin edificio' }}
+                                {{ $incidencia->apartamento->edificio->nombre ?? 'Sin hotel' }}
                             </div>
                         </div>
                     @elseif($incidencia->zonaComun)

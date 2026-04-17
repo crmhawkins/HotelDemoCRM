@@ -111,7 +111,7 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th>Fecha Check-in</th>
-                                        <th>Apartamento</th>
+                                        <th>Habitación</th>
                                         <th>Huesped principal</th>
                                         <th class="text-center">Estado DNI</th>
                                         <th class="text-center">Personas</th>

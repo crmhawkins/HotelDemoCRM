@@ -71,7 +71,7 @@
                                        class="form-control @error('page_title') is-invalid @enderror" 
                                        name="page_title" 
                                        value="{{ old('page_title', $seoMeta->page_title) }}"
-                                       placeholder="Ej: Apartamentos en Algeciras - Reserva Online">
+                                       placeholder="Ej: Habitaciones en Algeciras - Reserva Online">
                                 @error('page_title')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -86,7 +86,7 @@
                                 <textarea class="form-control @error('meta_description') is-invalid @enderror" 
                                           name="meta_description" 
                                           rows="3"
-                                          placeholder="Ej: Reserva apartamentos turísticos en Algeciras. Mejores precios, ubicación céntrica y todas las comodidades.">{{ old('meta_description', $seoMeta->meta_description) }}</textarea>
+                                          placeholder="Ej: Reserva habitaciones turísticas en Algeciras. Mejores precios, ubicación céntrica y todas las comodidades.">{{ old('meta_description', $seoMeta->meta_description) }}</textarea>
                                 @error('meta_description')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -102,11 +102,11 @@
                                        class="form-control @error('meta_keywords') is-invalid @enderror" 
                                        name="meta_keywords" 
                                        value="{{ old('meta_keywords', $seoMeta->meta_keywords) }}"
-                                       placeholder="Ej: apartamentos algeciras, alojamiento turístico, reserva online">
+                                       placeholder="Ej: habitaciones algeciras, alojamiento turístico, reserva online">
                                 @error('meta_keywords')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
-                                <small class="form-text text-muted">Separa las palabras clave con comas. Ej: apartamentos, algeciras, turismo</small>
+                                <small class="form-text text-muted">Separa las palabras clave con comas. Ej: habitaciones, algeciras, turismo</small>
                             </div>
                             
                             <div class="col-md-12 mb-3">

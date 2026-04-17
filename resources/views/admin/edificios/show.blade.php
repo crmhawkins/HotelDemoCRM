@@ -11,7 +11,7 @@
                         <i class="fas fa-building me-2 text-primary"></i>
                         {{ $edificio->nombre }}
                     </h1>
-                    <p class="text-muted mb-0">Información detallada del edificio</p>
+                    <p class="text-muted mb-0">Información detallada del hotel</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('admin.edificio.edit', $edificio->id) }}" class="btn btn-outline-primary">
@@ -28,7 +28,7 @@
     <div class="row">
         <!-- Columna principal -->
         <div class="col-lg-8">
-            <!-- Información del edificio -->
+            <!-- Información del hotel -->
             <div class="card shadow-sm border-0 mb-4">
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-semibold text-dark">
@@ -45,7 +45,7 @@
                                 </div>
                                 <div>
                                     <h4 class="mb-1 fw-bold text-dark">{{ $edificio->nombre }}</h4>
-                                    <p class="text-muted mb-0">Edificio #{{ $edificio->id }}</p>
+                                    <p class="text-muted mb-0">Hotel #{{ $edificio->id }}</p>
                                 </div>
                             </div>
                         </div>
@@ -91,16 +91,16 @@
                 </div>
             </div>
 
-            <!-- Apartamentos del edificio -->
+            <!-- Habitaciones del hotel -->
             <div class="card shadow-sm border-0 mb-4">
                 <div class="card-header bg-white border-0 py-3">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0 fw-semibold text-dark">
                             <i class="fas fa-home me-2 text-primary"></i>
-                            Apartamentos ({{ $edificio->apartamentos->count() }})
+                            Habitaciones ({{ $edificio->apartamentos->count() }})
                         </h5>
                         <a href="{{ route('apartamentos.admin.create') }}" class="btn btn-sm btn-primary">
-                            <i class="fas fa-plus me-2"></i>Nuevo Apartamento
+                            <i class="fas fa-plus me-2"></i>Nueva Habitación
                         </a>
                     </div>
                 </div>
@@ -158,12 +158,12 @@
                                                 <div class="btn-group" role="group">
                                                     <a href="{{ route('apartamentos.admin.show', $apartamento->id) }}" 
                                                        class="btn btn-sm btn-outline-primary" 
-                                                       title="Ver apartamento">
+                                                       title="Ver habitación">
                                                         <i class="fas fa-eye"></i>
                                                     </a>
                                                     <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" 
                                                        class="btn btn-sm btn-outline-secondary" 
-                                                       title="Editar apartamento">
+                                                       title="Editar habitación">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
                                                 </div>
@@ -178,17 +178,17 @@
                             <div class="mb-3">
                                 <i class="fas fa-home fa-3x text-muted"></i>
                             </div>
-                            <h5 class="text-muted mb-2">No hay apartamentos</h5>
-                            <p class="text-muted mb-3">Este edificio aún no tiene apartamentos registrados.</p>
+                            <h5 class="text-muted mb-2">No hay habitaciones</h5>
+                            <p class="text-muted mb-3">Este hotel aún no tiene habitaciones registradas.</p>
                             <a href="{{ route('apartamentos.admin.create') }}" class="btn btn-primary">
-                                <i class="fas fa-plus me-2"></i>Crear Primer Apartamento
+                                <i class="fas fa-plus me-2"></i>Crear Primera Habitación
                             </a>
                         </div>
                     @endif
                 </div>
             </div>
 
-            <!-- Checklists del edificio -->
+            <!-- Checklists del hotel -->
             <div class="card shadow-sm border-0">
                 <div class="card-header bg-white border-0 py-3">
                     <div class="d-flex justify-content-between align-items-center">
@@ -261,7 +261,7 @@
                                 <i class="fas fa-clipboard-check fa-3x text-muted"></i>
                             </div>
                             <h5 class="text-muted mb-2">No hay checklists</h5>
-                            <p class="text-muted mb-3">Este edificio aún no tiene checklists registrados.</p>
+                            <p class="text-muted mb-3">Este hotel aún no tiene checklists registrados.</p>
                             <a href="#" class="btn btn-primary">
                                 <i class="fas fa-plus me-2"></i>Crear Primer Checklist
                             </a>
@@ -287,7 +287,7 @@
                             <div class="text-center p-3 bg-primary-subtle rounded">
                                 <i class="fas fa-home fa-2x text-primary mb-2"></i>
                                 <h3 class="mb-1 fw-bold text-primary">{{ $totalApartamentos }}</h3>
-                                <small class="text-muted">Apartamentos</small>
+                                <small class="text-muted">Habitaciones</small>
                             </div>
                         </div>
                         <div class="col-6">
@@ -328,19 +328,19 @@
                 <div class="card-body p-4">
                     <div class="d-grid gap-2">
                         <a href="{{ route('apartamentos.admin.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus me-2"></i>Nuevo Apartamento
+                            <i class="fas fa-plus me-2"></i>Nueva Habitación
                         </a>
                         <a href="#" class="btn btn-outline-warning">
                             <i class="fas fa-clipboard-check me-2"></i>Nuevo Checklist
                         </a>
                         <a href="{{ route('admin.edificio.edit', $edificio->id) }}" class="btn btn-outline-secondary">
-                            <i class="fas fa-edit me-2"></i>Editar Edificio
+                            <i class="fas fa-edit me-2"></i>Editar Hotel
                         </a>
                         <button type="button" 
                                 class="btn btn-outline-danger delete-btn" 
                                 data-id="{{ $edificio->id }}"
                                 data-name="{{ $edificio->nombre }}">
-                            <i class="fas fa-trash me-2"></i>Eliminar Edificio
+                            <i class="fas fa-trash me-2"></i>Eliminar Hotel
                         </button>
                     </div>
                 </div>
@@ -356,7 +356,7 @@
                 </div>
                 <div class="card-body p-4">
                     <div class="mb-3">
-                        <small class="text-muted d-block">ID del Edificio</small>
+                        <small class="text-muted d-block">ID del Hotel</small>
                         <strong class="text-dark">#{{ $edificio->id }}</strong>
                     </div>
                     <div class="mb-3">
@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const edificioName = this.dataset.name;
             
             Swal.fire({
-                title: '¿Eliminar edificio?',
+                title: '¿Eliminar hotel?',
                 html: `¿Estás seguro de que quieres eliminar <strong>${edificioName}</strong>?<br><br>
                        <small class="text-muted">Esta acción no se puede deshacer.</small>`,
                 icon: 'warning',

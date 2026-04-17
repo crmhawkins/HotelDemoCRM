@@ -275,9 +275,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="apartamento_id" class="form-label">Apartamento</label>
+                                    <label for="apartamento_id" class="form-label">Habitación</label>
                                     <select class="form-select" id="apartamento_id" name="apartamento_id">
-                                        <option value="">Seleccionar apartamento</option>
+                                        <option value="">Seleccionar habitación</option>
                                         @foreach(\App\Models\Apartamento::all() as $apartamento)
                                             <option value="{{ $apartamento->id }}">{{ $apartamento->titulo }}</option>
                                         @endforeach

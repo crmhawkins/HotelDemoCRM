@@ -80,7 +80,7 @@
                 <div class="card-body">
                     <h6 class="fw-bold mb-3"><i class="fas fa-lightbulb text-warning me-2"></i>Consejos para un buen prompt</h6>
                     <ul class="mb-0" style="font-size: 14px;">
-                        <li>Define el <strong>nombre</strong> del asistente (ej: "Eres Maria, asistente de Apartamentos Hawkins")</li>
+                        <li>Define el <strong>nombre</strong> del asistente (ej: "Eres Maria, asistente de Hawkins Hotels")</li>
                         <li>Especifica el <strong>tono</strong>: formal, cercano, profesional</li>
                         <li>Indica que <strong>idioma</strong> debe usar (o que detecte el idioma del huesped)</li>
                         <li>Lista la <strong>informacion</strong> que debe dar: direccion, horarios, servicios, normas</li>

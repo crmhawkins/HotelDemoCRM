@@ -1125,7 +1125,7 @@
         <div class="booking-breadcrumb-content">
             <a href="{{ route('web.index') }}">Inicio</a>
             <span class="booking-breadcrumb-separator">></span>
-            <a href="{{ route('web.apartamentos') }}">Apartamentos</a>
+            <a href="{{ route('web.apartamentos') }}">Habitaciones</a>
             @if(isset($apartamento))
                 <span class="booking-breadcrumb-separator">></span>
                 <strong>{{ $apartamento->titulo ?? $apartamento->nombre }}</strong>

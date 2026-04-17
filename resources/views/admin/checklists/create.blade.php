@@ -35,17 +35,17 @@
                     <form action="{{ route('admin.checklists.store') }}" method="POST" id="checklist-form">
                         @csrf
                         
-                        <!-- Edificio -->
+                        <!-- Hotel -->
                         <div class="mb-4">
                             <label for="edificio_id" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-building me-2 text-primary"></i>
-                                Edificio
+                                Hotel
                             </label>
                             <select name="edificio_id" 
                                     id="edificio_id" 
                                     class="form-select @error('edificio_id') is-invalid @enderror" 
                                     required>
-                                <option value="">Selecciona un edificio</option>
+                                <option value="">Selecciona un hotel</option>
                                 @foreach ($edificios as $edificio)
                                     <option value="{{ $edificio->id }}" {{ old('edificio_id') == $edificio->id ? 'selected' : '' }}>
                                         {{ $edificio->nombre }}
@@ -57,7 +57,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Selecciona el edificio donde se aplicará este checklist
+                                Selecciona el hotel donde se aplicará este checklist
                             </div>
                         </div>
 

@@ -172,16 +172,16 @@
             </div>
         </div>
 
-        <!-- Restricciones de Apartamentos -->
+        <!-- Restricciones de Habitaciones -->
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-light">
-                <h5 class="mb-0"><i class="fas fa-building me-2"></i>Restricciones de Apartamentos</h5>
+                <h5 class="mb-0"><i class="fas fa-building me-2"></i>Restricciones de Habitaciones</h5>
             </div>
             <div class="card-body">
                 <div class="mb-3">
-                    <label class="form-label">Edificios Permitidos</label>
+                    <label class="form-label">Hoteles Permitidos</label>
                     <select name="edificios_ids[]" class="form-select @error('edificios_ids') is-invalid @enderror" multiple size="4">
-                        <option value="">-- Todos los edificios --</option>
+                        <option value="">-- Todos los hoteles --</option>
                         @foreach($edificios as $edificio)
                             <option value="{{ $edificio->id }}" 
                                 {{ in_array($edificio->id, old('edificios_ids', $cupon->edificios_ids ?? [])) ? 'selected' : '' }}>
@@ -196,9 +196,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">Apartamentos Permitidos</label>
+                    <label class="form-label">Habitaciones Permitidas</label>
                     <select name="apartamentos_ids[]" class="form-select @error('apartamentos_ids') is-invalid @enderror" multiple size="6">
-                        <option value="">-- Todos los apartamentos --</option>
+                        <option value="">-- Todas las habitaciones --</option>
                         @foreach($apartamentos as $apartamento)
                             <option value="{{ $apartamento->id }}" 
                                 {{ in_array($apartamento->id, old('apartamentos_ids', $cupon->apartamentos_ids ?? [])) ? 'selected' : '' }}>

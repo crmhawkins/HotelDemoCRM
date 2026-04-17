@@ -154,7 +154,7 @@
                                                         <div class="task-item">
                                                             @if($tarea->apartamento_id)
                                                                 <i class="fas fa-building text-primary"></i>
-                                                                {{ $tarea->apartamento->titulo ?? 'Apartamento' }}
+                                                                {{ $tarea->apartamento->titulo ?? 'Habitación' }}
                                                             @elseif($tarea->zona_comun_id)
                                                                 <i class="fas fa-users text-info"></i>
                                                                 {{ $tarea->zonaComun->nombre ?? 'Zona Común' }}

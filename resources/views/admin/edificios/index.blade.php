@@ -9,13 +9,13 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-building me-2 text-primary"></i>
-                        Gestión de Edificios
+                        Gestión de Hoteles
                     </h1>
-                    <p class="text-muted mb-0">Administra todos los edificios de la plataforma</p>
+                    <p class="text-muted mb-0">Administra todos los hoteles de la plataforma</p>
                 </div>
                 <a href="{{ route('admin.edificio.create') }}" class="btn btn-primary btn-lg">
                     <i class="fas fa-plus me-2"></i>
-                    Nuevo Edificio
+                    Nuevo Hotel
                 </a>
             </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h5 class="mb-0 fw-semibold text-dark">
                     <i class="fas fa-list me-2 text-primary"></i>
-                    Edificios ({{ $edificios->total() }})
+                    Hoteles ({{ $edificios->total() }})
                 </h5>
                 <div class="d-flex gap-2">
                     <span class="badge bg-primary-subtle text-primary px-3 py-2">
@@ -102,7 +102,7 @@
                                     <span class="fw-semibold">Clave</span>
                                 </th>
                                 <th class="border-0 py-3 px-4">
-                                    <span class="fw-semibold">Apartamentos</span>
+                                    <span class="fw-semibold">Habitaciones</span>
                                 </th>
                                 <th class="border-0 py-3 px-4">
                                     <span class="fw-semibold">Checklists</span>
@@ -148,19 +148,19 @@
                                         <div class="btn-group" role="group">
                                             <a href="{{ route('admin.edificio.show', $edificio->id) }}" 
                                                class="btn btn-sm btn-outline-primary" 
-                                               title="Ver edificio">
+                                               title="Ver hotel">
                                                 <i class="fas fa-eye"></i>
                                             </a>
                                             <a href="{{ route('admin.edificio.edit', $edificio->id) }}" 
                                                class="btn btn-sm btn-outline-secondary" 
-                                               title="Editar edificio">
+                                               title="Editar hotel">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             <button type="button" 
                                                     class="btn btn-sm btn-outline-danger delete-btn" 
                                                     data-id="{{ $edificio->id }}"
                                                     data-name="{{ $edificio->nombre }}"
-                                                    title="Eliminar edificio">
+                                                    title="Eliminar hotel">
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </div>
@@ -176,17 +176,17 @@
                     <div class="mb-3">
                         <i class="fas fa-building fa-3x text-muted"></i>
                     </div>
-                    <h5 class="text-muted mb-2">No se encontraron edificios</h5>
+                    <h5 class="text-muted mb-2">No se encontraron hoteles</h5>
                     <p class="text-muted mb-3">
                         @if($search)
                             No hay resultados para "{{ $search }}". Intenta con otros términos.
                         @else
-                            Comienza creando tu primer edificio.
+                            Comienza creando tu primer hotel.
                         @endif
                     </p>
                     @if(!$search)
                         <a href="{{ route('admin.edificio.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus me-2"></i>Crear Primer Edificio
+                            <i class="fas fa-plus me-2"></i>Crear Primer Hotel
                         </a>
                     @endif
                 </div>
@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const edificioName = this.dataset.name;
             
             Swal.fire({
-                title: '¿Eliminar edificio?',
+                title: '¿Eliminar hotel?',
                 html: `¿Estás seguro de que quieres eliminar <strong>${edificioName}</strong>?<br><br>
                        <small class="text-muted">Esta acción no se puede deshacer.</small>`,
                 icon: 'warning',

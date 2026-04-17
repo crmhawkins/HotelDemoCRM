@@ -36,7 +36,7 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>
-                                    <th>Edificio</th>
+                                    <th>Hotel</th>
                                     <th>Descripción</th>
                                     <th>Descuento</th>
                                     <th>Incremento</th>
@@ -54,7 +54,7 @@
                                         </td>
                                         <td>
                                             <span class="badge badge-secondary">
-                                                {{ $configuracion->edificio->nombre ?? 'Sin edificio' }}
+                                                {{ $configuracion->edificio->nombre ?? 'Sin hotel' }}
                                             </span>
                                         </td>
                                         <td>

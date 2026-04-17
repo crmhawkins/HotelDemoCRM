@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Detalles del Apartamento')
+@section('title', 'Detalles de la Habitación')
 
 @section('content')
 <div class="container-fluid">
@@ -13,7 +13,7 @@
                         <i class="fas fa-building me-2 text-primary"></i>
                         {{ $apartamento->titulo ?? $apartamento->nombre }}
                     </h1>
-                    <p class="text-muted mb-0">Información detallada y estadísticas del apartamento</p>
+                    <p class="text-muted mb-0">Información detallada y estadísticas de la habitación</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('apartamentos.admin.index') }}" class="btn btn-outline-secondary btn-lg">
@@ -40,7 +40,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0 fw-semibold text-dark">
                             <i class="fas fa-chart-line me-2 text-primary"></i>
-                            Estadísticas del Apartamento
+                            Estadísticas de la Habitación
                         </h5>
                         <form method="GET" class="d-flex gap-2">
                             <select name="año" class="form-select form-select-sm" style="width: auto;">
@@ -234,7 +234,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="info-group">
-                                <label class="form-label fw-semibold text-muted">Edificio</label>
+                                <label class="form-label fw-semibold text-muted">Hotel</label>
                                 <div class="info-value">
                                     {{ $apartamento->edificioRel ? $apartamento->edificioRel->nombre : 'No asignado' }}
                                 </div>
@@ -520,11 +520,11 @@
 
         <!-- Panel Lateral -->
         <div class="col-lg-4">
-            <!-- Información del Apartamento -->
+            <!-- Información de la Habitación -->
             <div class="card shadow-sm border-0 mb-4">
                 <div class="card-header bg-white border-0 py-3">
                     <h6 class="mb-0 fw-semibold text-dark">
-                        <i class="fas fa-info-circle me-2 text-primary"></i>Información del Apartamento
+                        <i class="fas fa-info-circle me-2 text-primary"></i>Información de la Habitación
                     </h6>
                 </div>
                 <div class="card-body">
@@ -570,7 +570,7 @@
                 <div class="card-body">
                     <div class="d-grid gap-2">
                         <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" class="btn btn-warning">
-                            <i class="fas fa-edit me-2"></i>Editar Apartamento
+                            <i class="fas fa-edit me-2"></i>Editar Habitación
                         </a>
                         
                         @if($apartamento->id_channex)
@@ -586,12 +586,12 @@
                 </div>
             </div>
 
-            <!-- Información del Edificio -->
+            <!-- Información del Hotel -->
             @if($apartamento->edificioRel)
                 <div class="card shadow-sm border-0">
                     <div class="card-header bg-white border-0 py-3">
                         <h6 class="mb-0 fw-semibold text-dark">
-                            <i class="fas fa-building me-2 text-primary"></i>Información del Edificio
+                            <i class="fas fa-building me-2 text-primary"></i>Información del Hotel
                         </h6>
                     </div>
                     <div class="card-body">
@@ -625,13 +625,13 @@
                 <div class="card shadow-sm border-0">
                     <div class="card-header bg-white border-0 py-3">
                         <h6 class="mb-0 fw-semibold text-dark">
-                            <i class="fas fa-building me-2 text-primary"></i>Información del Edificio
+                            <i class="fas fa-building me-2 text-primary"></i>Información del Hotel
                         </h6>
                     </div>
                     <div class="card-body">
                         <div class="info-group">
                             <div class="info-value">
-                                <span class="text-muted">No hay edificio asignado a este apartamento</span>
+                                <span class="text-muted">No hay hotel asignado a esta habitación</span>
                             </div>
                         </div>
                     </div>

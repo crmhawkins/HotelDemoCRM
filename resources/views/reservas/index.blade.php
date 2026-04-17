@@ -69,7 +69,7 @@
                 // Agrega la información del evento al cuerpo del modal. Puedes personalizar esto como quieras.
                 modal.find('.modal-body').append('<ul class="list-group">');
                 modal.find('.modal-body').append('<li class="list-group-item"><strong>Cliente:</strong> ' + eventObj.title + '</li>');
-                modal.find('.modal-body').append('<li class="list-group-item"><strong>Apartamento:</strong> ' + eventObj.extendedProps.apartamento.nombre + '</li>');
+                modal.find('.modal-body').append('<li class="list-group-item"><strong>Habitación:</strong> ' + eventObj.extendedProps.apartamento.nombre + '</li>');
                 modal.find('.modal-body').append('<li class="list-group-item"><strong>Codigo de la reserva:</strong> ' + eventObj.extendedProps.codigo_reserva + '</li>');
                 modal.find('.modal-body').append('<li class="list-group-item"><strong>Fecha de Entrada:</strong> ' + formatDate(eventObj.start) + '</li>');
                 modal.find('.modal-body').append('<li class="list-group-item"><strong>Fecha de Salida:</strong> ' + formatDate(eventObj.end) + '</li>');
@@ -144,7 +144,7 @@
                 <button type="button" 
                         class="btn btn-success btn-lg" 
                         data-bs-toggle="tooltip" 
-                        title="Ver ocupación de apartamentos"
+                        title="Ver ocupación de habitaciones"
                         onclick="mostrarOcupacionHoy()">
                     <i class="fas fa-calendar-check me-2"></i>
                     Ocupación Hoy

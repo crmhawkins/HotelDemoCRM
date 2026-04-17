@@ -253,8 +253,8 @@
                         <strong>Modo IA Activado</strong>
                         <ul class="mb-0 mt-2">
                             <li>Analiza todas las tareas y empleadas disponibles</li>
-                            <li>Prioriza apartamentos y zonas comunes (máxima prioridad)</li>
-                            <li>Asigna mantenimiento por edificio</li>
+                            <li>Prioriza habitaciones y zonas comunes (máxima prioridad)</li>
+                            <li>Asigna mantenimiento por hotel</li>
                             <li>Optimiza distribución respetando jornadas laborales</li>
                             <li>Genera asignación más eficiente que el sistema tradicional</li>
                         </ul>

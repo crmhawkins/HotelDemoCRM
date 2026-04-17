@@ -143,7 +143,7 @@
                                             <input class="form-check-input" type="checkbox" id="requiere_apartamento" name="requiere_apartamento" value="1"
                                                    {{ old('requiere_apartamento') ? 'checked' : '' }}>
                                             <label class="form-check-label" for="requiere_apartamento">
-                                                Requiere Apartamento
+                                                Requiere Habitación
                                             </label>
                                         </div>
                                     </div>

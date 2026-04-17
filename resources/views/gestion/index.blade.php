@@ -1428,7 +1428,7 @@
                 subtitulo = 'Amenities que necesitarás mañana';
                 break;
             default:
-                subtitulo = 'Gestiona los amenities para este apartamento';
+                subtitulo = 'Gestiona los amenities para esta habitación';
         }
         modalSubtitle.textContent = subtitulo;
         
@@ -1462,7 +1462,7 @@
                 <div class="text-center py-5">
                     <i class="fa fa-info-circle fa-3x text-muted mb-3"></i>
                     <h6 class="text-muted">No hay amenities configurados</h6>
-                    <p class="text-muted">No se han configurado amenities de consumo para este edificio.</p>
+                    <p class="text-muted">No se han configurado amenities de consumo para este hotel.</p>
                 </div>
             `;
             return;
@@ -1981,7 +1981,7 @@
                                             <br><em>🔄 Entra hoy mismo</em>
                                         @else
                                             <!-- Si no hay reserva que entre hoy, mostrar mensaje -->
-                                            <em>No hay entradas para este apartamento</em>
+                                            <em>No hay entradas para esta habitación</em>
                                         @endif
                                     </div>
                                 </div>
@@ -2034,7 +2034,7 @@
                     @else
                         <div class="apple-empty-state">
                             <i class="fa-solid fa-check-circle"></i>
-                            <span>No hay apartamentos pendientes</span>
+                            <span>No hay habitaciones pendientes</span>
                         </div>
                     @endif
 
@@ -2047,7 +2047,7 @@
                 <div class="apple-card-header" data-bs-toggle="collapse" data-bs-target="#collapseTerminar" aria-expanded="@if(count($reservasEnLimpieza) > 0) true @else false @endif" aria-controls="collapseTerminar">
                     <div class="apple-card-title">
                         <i class="fa-solid fa-clock"></i>
-                        <span>{{ __('Apartamentos por Terminar') }}</span>
+                        <span>{{ __('Habitaciones por Terminar') }}</span>
                         <div class="apple-card-counter">{{ count($reservasEnLimpieza) }}</div>
                     </div>
                     <div class="apple-card-toggle">
@@ -2127,7 +2127,7 @@
                                             <br><em>🔄 Entra hoy mismo</em>
                                         @elseif(!isset($reservaEnLimpieza->tarea_asignada))
                                             <!-- Solo para sistema antiguo: Si no hay reserva que entre hoy, mostrar mensaje -->
-                                            <em>No hay entradas para este apartamento</em>
+                                            <em>No hay entradas para esta habitación</em>
                                         @endif
                                     </div>
                                 </div>
@@ -2194,7 +2194,7 @@
                     @else
                         <div class="apple-empty-state">
                             <i class="fa-solid fa-clock"></i>
-                            <span>No hay apartamentos en limpieza</span>
+                            <span>No hay habitaciones en limpieza</span>
                         </div>
                     @endif
                 </div>
@@ -2203,7 +2203,7 @@
                 <div class="apple-card-header" data-bs-toggle="collapse" data-bs-target="#collapseLimpios" aria-expanded="false" aria-controls="collapseLimpios">
                     <div class="apple-card-title">
                         <i class="fa-solid fa-check-circle"></i>
-                        <span>{{ __('Apartamentos Limpiados HOY') }}</span>
+                        <span>{{ __('Habitaciones Limpiadas HOY') }}</span>
                         <div class="apple-card-counter">{{ count($reservasLimpieza) }}</div>
                     </div>
                     <div class="apple-card-toggle">
@@ -2252,7 +2252,7 @@
                                             <br><em>🔄 Entra hoy mismo</em>
                                         @else
                                             <!-- Si no hay reserva que entre hoy, mostrar mensaje -->
-                                            <br><em>No hay entradas para este apartamento</em>
+                                            <br><em>No hay entradas para esta habitación</em>
                                         @endif
                                     </div>
                                 </div>
@@ -2298,7 +2298,7 @@
                     @else
                         <div class="apple-empty-state">
                             <i class="fa-solid fa-check-circle"></i>
-                            <span>No hay apartamentos finalizados</span>
+                            <span>No hay habitaciones finalizadas</span>
                         </div>
                     @endif
                 </div>
@@ -2308,7 +2308,7 @@
                 <div class="apple-card-header" data-bs-toggle="collapse" data-bs-target="#apartamentosManana" aria-expanded="false" aria-controls="apartamentosManana">
                     <div class="apple-card-title">
                         <i class="fa-solid fa-calendar-day"></i>
-                        <span>Apartamentos previstos Mañana</span>
+                        <span>Habitaciones previstas Mañana</span>
                         <div class="apple-card-counter">{{ count($reservasManana) }}</div>
                     </div>
                     <div class="apple-card-toggle">
@@ -2350,7 +2350,7 @@
                                                 <br><em>📅 Entra mañana mismo</em>
                                             @else
                                                 <!-- Si no hay reserva que entre mañana, mostrar mensaje -->
-                                                <em>No hay entradas para este apartamento</em>
+                                                <em>No hay entradas para esta habitación</em>
                                             @endif
                                         </div>
                                     </div>
@@ -2378,7 +2378,7 @@
                     @else
                         <div class="apple-empty-state">
                             <i class="fa-solid fa-calendar-day"></i>
-                            <span>No hay apartamentos previstos para mañana</span>
+                            <span>No hay habitaciones previstas para mañana</span>
                         </div>
                     @endif
                 </div>
@@ -2397,7 +2397,7 @@
                         </div>
                         <div class="title-text">
                             <h5 id="amenitiesModalLabel">Amenities de Consumo</h5>
-                            <p id="amenitiesModalSubtitle">Gestiona los amenities para este apartamento</p>
+                            <p id="amenitiesModalSubtitle">Gestiona los amenities para esta habitación</p>
                         </div>
                     </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -2580,7 +2580,7 @@
                     <div class="alert alert-light">
                         <strong>Tipo:</strong> ${data.elemento.tipo}<br>
                         <strong>Nombre:</strong> ${data.elemento.nombre}
-                        ${data.elemento.edificio ? '<br><strong>Edificio:</strong> ' + data.elemento.edificio : ''}
+                        ${data.elemento.edificio ? '<br><strong>Hotel:</strong> ' + data.elemento.edificio : ''}
                         ${data.elemento.descripcion ? '<br><strong>Descripción:</strong> ' + data.elemento.descripcion : ''}
                     </div>
                     

@@ -45,10 +45,10 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="edificio_id">Edificio *</label>
-                                    <select class="form-control @error('edificio_id') is-invalid @enderror" 
+                                    <label for="edificio_id">Hotel *</label>
+                                    <select class="form-control @error('edificio_id') is-invalid @enderror"
                                             id="edificio_id" name="edificio_id" required>
-                                        <option value="">Seleccionar edificio</option>
+                                        <option value="">Seleccionar hotel</option>
                                         @foreach($edificios as $edificio)
                                             <option value="{{ $edificio->id }}" {{ old('edificio_id') == $edificio->id ? 'selected' : '' }}>
                                                 {{ $edificio->nombre }}

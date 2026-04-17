@@ -64,7 +64,7 @@
                                         <th>Cantidad</th>
                                         <th>Tipo</th>
                                         <th>Usuario</th>
-                                        <th>Apartamento</th>
+                                        <th>Habitación</th>
                                         <th>Limpieza</th>
                                         <th>Tarea</th>
                                         <th>Observaciones</th>

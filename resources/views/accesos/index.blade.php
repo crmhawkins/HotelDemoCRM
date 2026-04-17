@@ -38,7 +38,7 @@
             <thead class="table-dark">
                 <tr>
                     <th>ID</th>
-                    <th>Apartamento</th>
+                    <th>Habitación</th>
                     <th>Huésped</th>
                     <th>Entrada</th>
                     <th>Salida</th>

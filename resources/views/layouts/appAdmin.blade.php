@@ -182,10 +182,10 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="{{ route('apartamentos.admin.index') }}">
-                                            <i class="fas fa-home me-2"></i>Apartamentos
+                                            <i class="fas fa-home me-2"></i>Habitaciones
                                         </a></li>
                                         <li><a class="dropdown-item" href="{{ route('admin.edificios.index') }}">
-                                            <i class="fas fa-building me-2"></i>Edificios
+                                            <i class="fas fa-building me-2"></i>Hoteles
                                         </a></li>
                                         <li><a class="dropdown-item" href="{{ route('admin.checklists.index') }}">
                                             <i class="fas fa-clipboard-list me-2"></i>Categorías de Limpieza
@@ -319,7 +319,7 @@
                                         </a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{ route('admin.cerrar-apartamento.index') }}">
-                                            <i class="fas fa-door-closed me-2"></i>Cerrar Apartamento
+                                            <i class="fas fa-door-closed me-2"></i>Cerrar Habitación
                                         </a></li>
                                         <li><hr class="dropdown-divider"></li>
                                         <li><a class="dropdown-item" href="{{ route('admin.monitorizacion-dni.index') }}">

@@ -344,9 +344,9 @@
                     @csrf
                     <div class="row mb-4">
                         <div class="col-md-6">
-                            <label for="ari_property_id" class="form-label fw-bold">Apartamento:</label>
+                            <label for="ari_property_id" class="form-label fw-bold">Habitación:</label>
                             <select id="ari_property_id" name="updates[0][property_id]" class="form-select" required>
-                                <option value="">Seleccione un apartamento</option>
+                                <option value="">Seleccione una habitación</option>
                                 @foreach($apartamentos as $apartamento)
                                     @if($apartamento->id_channex)
                                         <option value="{{ $apartamento->id_channex }}">{{ $apartamento->titulo }}</option>

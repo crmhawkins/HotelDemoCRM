@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Crear Apartamento')
+@section('title', 'Crear Habitación')
 
 @section('content')
 <div class="container-fluid">
@@ -11,9 +11,9 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-plus-circle me-2 text-success"></i>
-                        Crear Nuevo Apartamento
+                        Crear Nueva Habitación
                     </h1>
-                    <p class="text-muted mb-0">Completa la información del apartamento para registrarlo en Channex</p>
+                    <p class="text-muted mb-0">Completa la información de la habitación para registrarla en Channex</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('apartamentos.admin.index') }}" class="btn btn-outline-secondary btn-lg">
@@ -31,7 +31,7 @@
     <div class="card shadow-sm border-0">
         <div class="card-header bg-white border-0 py-3">
             <h5 class="mb-0 fw-semibold text-dark">
-                <i class="fas fa-edit me-2 text-primary"></i>Información del Apartamento
+                <i class="fas fa-edit me-2 text-primary"></i>Información de la Habitación
             </h5>
         </div>
         <div class="card-body">
@@ -103,10 +103,10 @@
                     <div class="col-md-6 mb-3">
                         <div class="form-group">
                             <label for="edificio_id" class="form-label fw-semibold">
-                                <i class="fas fa-building me-1 text-primary"></i>Edificio <span class="text-danger">*</span>
+                                <i class="fas fa-building me-1 text-primary"></i>Hotel <span class="text-danger">*</span>
                             </label>
                             <select name="edificio_id" id="edificio_id" class="form-select @error('edificio_id') is-invalid @enderror" required>
-                                <option value="">Selecciona un edificio</option>
+                                <option value="">Selecciona un hotel</option>
                                 @if (count($edificios) > 0)
                                     @foreach ($edificios as $edificio)
                                         <option value="{{ $edificio->id }}" {{ old('edificio_id') == $edificio->id ? 'selected' : '' }}>
@@ -133,7 +133,7 @@
                                    id="nombre" 
                                    name="nombre" 
                                    value="{{ old('nombre') }}"
-                                   placeholder="Nombre interno del apartamento">
+                                   placeholder="Nombre interno de la habitación">
                             @error('nombre')
                                 <div class="invalid-feedback">
                                     <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
@@ -161,7 +161,7 @@
                                    id="address" 
                                    name="address" 
                                    value="{{ old('address') }}"
-                                   placeholder="Dirección completa del apartamento"
+                                   placeholder="Dirección completa de la habitación"
                                    required>
                             @error('address')
                                 <div class="invalid-feedback">
@@ -181,7 +181,7 @@
                                    id="city" 
                                    name="city" 
                                    value="{{ old('city') }}"
-                                   placeholder="Ciudad del apartamento"
+                                   placeholder="Ciudad de la habitación"
                                    required>
                             @error('city')
                                 <div class="invalid-feedback">
@@ -220,7 +220,7 @@
                                    id="country" 
                                    name="country" 
                                    value="{{ old('country', 'Spain') }}"
-                                   placeholder="País del apartamento"
+                                   placeholder="País de la habitación"
                                    required>
                             @error('country')
                                 <div class="invalid-feedback">
@@ -341,11 +341,11 @@
                     </div>
                 </div>
 
-                <!-- Detalles del Apartamento -->
+                <!-- Detalles de la Habitación -->
                 <div class="row mb-4">
                     <div class="col-12">
                         <h6 class="text-primary mb-3 fw-semibold">
-                            <i class="fas fa-bed me-2"></i>Detalles del Apartamento
+                            <i class="fas fa-bed me-2"></i>Detalles de la Habitación
                         </h6>
                     </div>
                     
@@ -452,7 +452,7 @@
                                       id="description" 
                                       name="description" 
                                       rows="4"
-                                      placeholder="Descripción detallada del apartamento"
+                                      placeholder="Descripción detallada de la habitación"
                                       required>{{ old('description') }}</textarea>
                             @error('description')
                                 <div class="invalid-feedback">
@@ -537,7 +537,7 @@
                                 <i class="fas fa-times me-2"></i>Cancelar
                             </a>
                             <button type="submit" class="btn btn-success btn-lg">
-                                <i class="fas fa-save me-2"></i>Guardar Apartamento
+                                <i class="fas fa-save me-2"></i>Guardar Habitación
                             </button>
                         </div>
                     </div>
@@ -548,10 +548,10 @@
                         @endphp
                         @include('admin.apartamentos.partials.booking-fields')
                         
-                        <!-- Servicios del Apartamento -->
+                        <!-- Servicios de la Habitación -->
                         @php $serviciosSeleccionados = []; @endphp
                         @include('admin.apartamentos.partials.servicios-select')
-                        
+
                         <!-- Gestión de Fotos (Opcional en creación) -->
                         <div class="mb-4">
                             <div class="card shadow-sm border-0">
@@ -564,7 +564,7 @@
                                 <div class="card-body">
                                     <div class="alert alert-info mb-3">
                                         <i class="fas fa-info-circle me-2"></i>
-                                        <strong>Nota:</strong> Puedes subir fotos ahora o hacerlo después de crear el apartamento desde la página de edición.
+                                        <strong>Nota:</strong> Puedes subir fotos ahora o hacerlo después de crear la habitación desde la página de edición.
                                     </div>
                                     
                                     <div class="mb-3">
@@ -581,7 +581,7 @@
                                         <small class="form-text text-muted">
                                             Selecciona una o más fotos (máx. 5MB cada una). Formatos: JPG, PNG, WEBP.
                                             <br>
-                                            <strong>Las fotos se subirán automáticamente al crear el apartamento.</strong>
+                                            <strong>Las fotos se subirán automáticamente al crear la habitación.</strong>
                                         </small>
                                         <div class="mt-2">
                                             <div id="photosPreview" class="row g-2 mt-2"></div>
@@ -590,7 +590,7 @@
                                     
                                     <div class="alert alert-warning mb-0">
                                         <i class="fas fa-exclamation-triangle me-2"></i>
-                                        <small>Después de crear el apartamento, podrás gestionar las fotos (marcar principal, eliminar, reordenar) desde la página de edición.</small>
+                                        <small>Después de crear la habitación, podrás gestionar las fotos (marcar principal, eliminar, reordenar) desde la página de edición.</small>
                                     </div>
                                 </div>
                             </div>
@@ -602,7 +602,7 @@
                         @endphp
                         @include('admin.apartamentos.partials.booking-fields')
                         
-                        <!-- Servicios del Apartamento -->
+                        <!-- Servicios de la Habitación -->
                         @php $serviciosSeleccionados = []; @endphp
                         @include('admin.apartamentos.partials.servicios-select')
                     </form>

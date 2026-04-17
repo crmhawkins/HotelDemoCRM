@@ -172,7 +172,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Fecha Aplicación</th>
-                                                <th>Apartamento</th>
+                                                <th>Habitación</th>
                                                 <th>Tarifa</th>
                                                 <th>Días</th>
                                                 <th>Ahorro Total</th>

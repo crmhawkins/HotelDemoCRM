@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Cierres de Apartamentos')
+@section('title', 'Cierres de Habitaciones')
 
 @section('content')
 <div class="container-fluid">
@@ -11,9 +11,9 @@
                 <div>
                     <h1 class="h3 mb-0 text-gray-800">
                         <i class="fas fa-door-closed text-primary me-2"></i>
-                        Cierres de Apartamentos
+                        Cierres de Habitaciones
                     </h1>
-                    <p class="text-muted mb-0">Gestión de cierres de apartamentos</p>
+                    <p class="text-muted mb-0">Gestión de cierres de habitaciones</p>
                 </div>
                 <div>
                     <a href="{{ route('admin.cerrar-apartamento.create') }}" class="btn btn-primary">
@@ -50,7 +50,7 @@
                 <div class="card-body text-center">
                     <i class="fas fa-home text-info fa-2x mb-2"></i>
                     <h4 class="mb-1 fw-bold text-info">{{ $apartamentosCerrados ?? 0 }}</h4>
-                    <small class="text-muted">Apartamentos Cerrados</small>
+                    <small class="text-muted">Habitaciones Cerradas</small>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th style="width: 5%;">ID</th>
-                                        <th style="width: 20%;">Apartamento</th>
+                                        <th style="width: 20%;">Habitación</th>
                                         <th style="width: 15%;">Fecha Inicio</th>
                                         <th style="width: 15%;">Fecha Fin</th>
                                         <th style="width: 10%;">Días</th>
@@ -165,7 +165,7 @@
                         <div class="text-center py-5">
                             <i class="fas fa-door-closed text-muted fa-3x mb-3"></i>
                             <h5 class="text-muted">No hay cierres registrados</h5>
-                            <p class="text-muted">Crea tu primer cierre de apartamento</p>
+                            <p class="text-muted">Crea tu primer cierre de habitación</p>
                             <a href="{{ route('admin.cerrar-apartamento.create') }}" class="btn btn-primary">
                                 <i class="fas fa-plus me-2"></i>
                                 Crear Primer Cierre
@@ -200,7 +200,7 @@
     function finalizarCierre(cierreId) {
         Swal.fire({
             title: '¿Finalizar cierre?',
-            text: '¿Estás seguro de que quieres finalizar este cierre de apartamento?',
+            text: '¿Estás seguro de que quieres finalizar este cierre de habitación?',
             icon: 'question',
             showCancelButton: true,
             confirmButtonText: 'Sí, finalizar',

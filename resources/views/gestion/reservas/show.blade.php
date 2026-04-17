@@ -114,7 +114,7 @@
                 <div class="section-header">
                     <div class="section-title-container">
                         <i class="fas fa-home text-primary"></i>
-                        <h3>Información del Apartamento</h3>
+                        <h3>Información de la Habitación</h3>
                     </div>
                 </div>
                 <div class="section-content">
@@ -125,7 +125,7 @@
                                 <span>{{ $reserva->apartamento->nombre ?? 'N/A' }}</span>
                             </div>
                             <div class="info-item">
-                                <strong>Edificio:</strong>
+                                <strong>Hotel:</strong>
                                 <span>{{ $reserva->apartamento->edificio->nombre ?? 'N/A' }}</span>
                             </div>
                         </div>

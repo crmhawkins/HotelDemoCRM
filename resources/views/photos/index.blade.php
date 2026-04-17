@@ -15,7 +15,7 @@
 <div class="photos-container">
     <div class="photos-header">
         <h4><i class="bi bi-camera"></i> Fotos de limpieza</h4>
-        <p class="photos-subtitle">{{ $limpieza->apartamento->nombre ?? 'Apartamento' }}</p>
+        <p class="photos-subtitle">{{ $limpieza->apartamento->nombre ?? 'Habitación' }}</p>
     </div>
 
     <div class="photos-grid">

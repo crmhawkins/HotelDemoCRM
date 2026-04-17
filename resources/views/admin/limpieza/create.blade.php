@@ -11,7 +11,7 @@
     }
 </style>
 <div class="container-fluid">
-    <h2 class="mb-3">{{ __('Limpieza a Fondo de un Apartamento') }}</h2>
+    <h2 class="mb-3">{{ __('Limpieza a Fondo de una Habitación') }}</h2>
     <hr class="mb-5">
     <div class="row justify-content-center">
         <div class="col-md-12">
@@ -24,9 +24,9 @@
             <form action="{{ route('admin.limpiezaFondo.store') }}" method="POST" class="mb-4">
               @csrf
                 <div class="form-grup mb-5">
-                  <label for="form-label">Apartamento</label>
+                  <label for="form-label">Habitación</label>
                   <select class="form-select @error('apartamento_id') is-invalid @enderror" name="apartamento_id" id="apartamento_id">
-                    <option value="">-- Selecione Apartamento --</option>
+                    <option value="">-- Seleccione Habitación --</option>
                     @foreach ($apartamentos as $apartamento)
                         <option value="{{ $apartamento->id }}" {{ old('apartamento_id') == $apartamento->id ? 'selected' : '' }}>
                             @if (isset($apartamento->edificioName->nombre))

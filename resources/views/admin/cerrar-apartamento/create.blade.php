@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Crear Cierre de Apartamento')
+@section('title', 'Crear Cierre de Habitación')
 
 @section('content')
 <div class="container-fluid">
@@ -11,9 +11,9 @@
                 <div>
                     <h1 class="h3 mb-0 text-gray-800">
                         <i class="fas fa-plus-circle text-success me-2"></i>
-                        Crear Cierre de Apartamento
+                        Crear Cierre de Habitación
                     </h1>
-                    <p class="text-muted mb-0">Formulario para crear un nuevo cierre de apartamento</p>
+                    <p class="text-muted mb-0">Formulario para crear un nuevo cierre de habitación</p>
                 </div>
                 <div>
                     <a href="{{ route('admin.cerrar-apartamento.index') }}" class="btn btn-outline-secondary">
@@ -60,10 +60,10 @@
                             <div class="col-12">
                                 <label for="apartamento_id" class="form-label fw-semibold">
                                     <i class="fas fa-home text-primary me-1"></i>
-                                    Apartamento
+                                    Habitación
                                 </label>
                                 <select class="form-select form-select-lg {{ $errors->has('apartamento_id') ? 'is-invalid' : '' }}" id="apartamento_id" name="apartamento_id" required>
-                                    <option value="">Seleccionar apartamento</option>
+                                    <option value="">Seleccionar habitación</option>
                                     @foreach($apartamentos as $apartamento)
                                         <option value="{{ $apartamento->id }}" {{ old('apartamento_id') == $apartamento->id ? 'selected' : '' }}>
                                             {{ $apartamento->nombre }}
@@ -75,7 +75,7 @@
                                 @enderror
                                 <div class="form-text text-muted">
                                     <i class="fas fa-info-circle me-1"></i>
-                                    Selecciona el apartamento que deseas cerrar
+                                    Selecciona la habitación que deseas cerrar
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                                 @enderror
                                 <div class="form-text text-muted">
                                     <i class="fas fa-info-circle me-1"></i>
-                                    Fecha en que inicia el cierre del apartamento
+                                    Fecha en que inicia el cierre de la habitación
                                 </div>
                             </div>
                             
@@ -118,7 +118,7 @@
                                 @enderror
                                 <div class="form-text text-muted">
                                     <i class="fas fa-info-circle me-1"></i>
-                                    Fecha en que termina el cierre del apartamento
+                                    Fecha en que termina el cierre de la habitación
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
                     <div>
                         <h6 class="alert-heading mb-1">Información importante</h6>
                         <p class="mb-0 text-muted">
-                            Al crear un cierre de apartamento, se creará automáticamente una reserva con el cliente "Apartamento Cerrado" 
+                            Al crear un cierre de habitación, se creará automáticamente una reserva con el cliente "Habitación Cerrada"
                             y el estado "Cerrado" para el período especificado.
                         </p>
                     </div>

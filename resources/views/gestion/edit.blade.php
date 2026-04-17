@@ -1,7 +1,7 @@
 @extends('layouts.appPersonal')
 
 @section('title')
-    {{ __('Realizando el Apartamento - ') . $apartamentoLimpieza->apartamento->nombre}}
+    {{ __('Realizando la Habitación - ') . $apartamentoLimpieza->apartamento->nombre}}
 @endsection
 
 @section('bienvenido')
@@ -596,7 +596,7 @@
                                             <i class="fas fa-box-open"></i>
                                         </div>
                                         <h4>No hay amenities configurados</h4>
-                                        <p>Para este edificio no se han configurado amenities de limpieza.</p>
+                                        <p>Para este hotel no se han configurado amenities de limpieza.</p>
                                     </div>
                                 @endif
                             </div>

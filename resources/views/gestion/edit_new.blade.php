@@ -1,7 +1,7 @@
 @extends('layouts.appPersonal')
 
 @section('title')
-    {{ __('Realizando el Apartamento - ') . $apartamentoLimpieza->apartamento->nombre }}
+    {{ __('Realizando la Habitación - ') . $apartamentoLimpieza->apartamento->nombre }}
 @endsection
 
 @section('bienvenido')
@@ -10,7 +10,7 @@
 
 @section('content')
 <div class="container" style="padding-right: 2.5rem !important; padding-left: 2.5rem !important;">
-    <h2 class="mb-3">{{ __('Editar Limpieza del Apartamento') }}</h2>
+    <h2 class="mb-3">{{ __('Editar Limpieza de la Habitación') }}</h2>
     <hr class="mb-2">
 
     <form id="limpieza-form" action="{{ route('gestion.update', $apartamentoLimpieza->id) }}" method="POST" enctype="multipart/form-data">
@@ -80,7 +80,7 @@
                 <hr>
             @endforeach
         @else
-            <p>{{ __('No hay checklists asociados a este edificio.') }}</p>
+            <p>{{ __('No hay checklists asociados a este hotel.') }}</p>
         @endif
 
         <button type="submit" class="btn btn-primary">{{ __('Guardar cambios') }}</button>

@@ -1080,7 +1080,7 @@ function finalizarTarea() {
     // Si faltan checks, mostrar popup SweetAlert
     if (porcentajeCompletado < 100) {
         Swal.fire({
-            title: '¡No has revisado todos los tics del apartamento!',
+            title: '¡No has revisado todos los tics de la habitación!',
             text: 'Faltan ' + (totalItems - itemsCompletados) + ' elementos por revisar',
             icon: 'warning',
             showCancelButton: true,

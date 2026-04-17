@@ -33,13 +33,13 @@
                         <input type="text" 
                                class="form-control border-start-0 ps-0" 
                                name="search" 
-                               placeholder="Buscar por nombre o edificio..." 
+                               placeholder="Buscar por nombre u hotel..."
                                value="{{ $search ?? '' }}">
                     </div>
                 </div>
                 <div class="col-md-3">
                     <select name="edificio_id" class="form-select">
-                        <option value="">Todos los edificios</option>
+                        <option value="">Todos los hoteles</option>
                         @foreach($edificios as $edificio)
                             <option value="{{ $edificio->id }}" {{ request('edificio_id') == $edificio->id ? 'selected' : '' }}>
                                 {{ $edificio->nombre }}
@@ -100,7 +100,7 @@
                                 <th class="border-0 py-3 px-4">
                                     <a href="{{ route('admin.checklists.index', ['sort' => 'edificio_id', 'order' => request('order', 'asc') == 'asc' ? 'desc' : 'asc', 'search' => request('search'), 'edificio_id' => request('edificio_id')]) }}"
                                        class="text-decoration-none text-dark d-flex align-items-center">
-                                        <span class="fw-semibold">Edificio</span>
+                                        <span class="fw-semibold">Hotel</span>
                                         @if(request('sort') == 'edificio_id')
                                             <i class="fas fa-sort-{{ request('order', 'asc') == 'asc' ? 'up' : 'down' }} ms-2 text-primary"></i>
                                         @else

@@ -75,7 +75,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Fecha Deteccion</th>
-                                <th>Apartamento</th>
+                                <th>Habitación</th>
                                 <th>Reservas Involucradas</th>
                                 <th>Estado</th>
                                 <th>Ultima Notificacion</th>
@@ -92,7 +92,7 @@
                                     </td>
                                     <td>
                                         <i class="fas fa-home me-1 text-muted"></i>
-                                        {{ $apartamentos[$conflicto->apartamento_id] ?? 'Apartamento #' . $conflicto->apartamento_id }}
+                                        {{ $apartamentos[$conflicto->apartamento_id] ?? 'Habitación #' . $conflicto->apartamento_id }}
                                     </td>
                                     <td>
                                         @if(is_array($conflicto->reserva_ids))
@@ -166,7 +166,7 @@
                         <thead class="table-light">
                             <tr>
                                 <th>Fecha Deteccion</th>
-                                <th>Apartamento</th>
+                                <th>Habitación</th>
                                 <th>Reservas Involucradas</th>
                                 <th>Estado</th>
                                 <th>Resuelto el</th>
@@ -183,7 +183,7 @@
                                     </td>
                                     <td>
                                         <i class="fas fa-home me-1 text-muted"></i>
-                                        {{ $apartamentos[$conflicto->apartamento_id] ?? 'Apartamento #' . $conflicto->apartamento_id }}
+                                        {{ $apartamentos[$conflicto->apartamento_id] ?? 'Habitación #' . $conflicto->apartamento_id }}
                                     </td>
                                     <td>
                                         @if(is_array($conflicto->reserva_ids))

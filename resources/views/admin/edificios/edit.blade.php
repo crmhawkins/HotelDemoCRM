@@ -9,9 +9,9 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-edit me-2 text-primary"></i>
-                        Editar Edificio
+                        Editar Hotel
                     </h1>
-                    <p class="text-muted mb-0">Modifica la información del edificio "{{ $edificio->nombre }}"</p>
+                    <p class="text-muted mb-0">Modifica la información del hotel "{{ $edificio->nombre }}"</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('admin.edificio.show', $edificio->id) }}" class="btn btn-outline-info">
@@ -32,7 +32,7 @@
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-semibold text-dark">
                         <i class="fas fa-building me-2 text-primary"></i>
-                        Información del Edificio
+                        Información del Hotel
                     </h5>
                 </div>
                 
@@ -40,11 +40,11 @@
                     <form action="{{ route('admin.edificio.update', $edificio->id) }}" method="POST" id="edificio-form">
                         @csrf
                         
-                        <!-- Nombre del edificio -->
+                        <!-- Nombre del hotel -->
                         <div class="mb-4">
                             <label for="nombre" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-signature me-2 text-primary"></i>
-                                Nombre del Edificio
+                                Nombre del Hotel
                             </label>
                             <input type="text" 
                                    class="form-control @error('nombre') is-invalid @enderror" 
@@ -88,7 +88,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Clave única para identificar el edificio en el sistema
+                                Clave única para identificar el hotel en el sistema
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@
                             </div>
                         </div>
 
-                        <!-- Tipo de cerradura principal (puerta edificio) -->
+                        <!-- Tipo de cerradura principal (puerta hotel) -->
                         <div class="mb-4">
                             <label for="tipo_cerradura_principal" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-door-open me-2 text-primary"></i>
@@ -145,7 +145,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Tipo de cerradura de la puerta principal del edificio
+                                Tipo de cerradura de la puerta principal del hotel
                             </div>
                         </div>
 
@@ -153,7 +153,7 @@
                         <div class="mb-4" id="tuyalaravel-building-section" style="{{ in_array($valorTipoCerradura, ['ttlock', 'tuya']) ? '' : 'display:none;' }}">
                             <label for="tuyalaravel_building_id" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-link me-2 text-primary"></i>
-                                ID Edificio en App Cerraduras
+                                ID Hotel en App Cerraduras
                             </label>
                             <input type="number"
                                    class="form-control @error('tuyalaravel_building_id') is-invalid @enderror"
@@ -166,7 +166,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                ID del edificio en la app gestora de cerraduras (Tuyalaravel)
+                                ID del hotel en la app gestora de cerraduras (Tuyalaravel)
                             </div>
                         </div>
 
@@ -209,16 +209,16 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Si está activado, las reservas de este edificio se enviarán automáticamente al sistema MIR cuando estén listas
+                                Si está activado, las reservas de este hotel se enviarán automáticamente al sistema MIR cuando estén listas
                             </div>
                         </div>
 
-                        <!-- Información del edificio -->
+                        <!-- Información del hotel -->
                         <div class="alert alert-info border-0">
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-info-circle me-3 text-info"></i>
                                 <div>
-                                    <h6 class="alert-heading mb-1">Información del Edificio</h6>
+                                    <h6 class="alert-heading mb-1">Información del Hotel</h6>
                                     <p class="mb-0 small">
                                         <strong>ID:</strong> #{{ $edificio->id }} | 
                                         <strong>Creado:</strong> {{ $edificio->created_at->format('d/m/Y H:i') }} | 
@@ -232,7 +232,7 @@
                         <div class="d-flex gap-3 pt-3">
                             <button type="submit" class="btn btn-primary btn-lg px-4" id="submit-btn">
                                 <i class="fas fa-save me-2"></i>
-                                Actualizar Edificio
+                                Actualizar Hotel
                             </button>
                             <a href="{{ route('admin.edificios.index') }}" class="btn btn-outline-secondary btn-lg px-4">
                                 <i class="fas fa-times me-2"></i>
@@ -257,7 +257,7 @@
                             <div class="text-center p-3 bg-primary-subtle rounded">
                                 <i class="fas fa-home fa-2x text-primary mb-2"></i>
                                 <h4 class="mb-1 fw-bold text-primary">{{ $edificio->apartamentos->count() }}</h4>
-                                <small class="text-muted">Apartamentos</small>
+                                <small class="text-muted">Habitaciones</small>
                             </div>
                         </div>
                         <div class="col-6">
@@ -309,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Swal.fire({
                 icon: 'warning',
                 title: 'Campo requerido',
-                text: 'Primero debes ingresar el nombre del edificio',
+                text: 'Primero debes ingresar el nombre del hotel',
                 confirmButtonColor: '#6c757d'
             });
         }
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Actualizando...';
         
         Swal.fire({
-            title: 'Actualizando edificio...',
+            title: 'Actualizando hotel...',
             text: 'Por favor espera mientras se procesa la información',
             allowOutsideClick: false,
             didOpen: () => {

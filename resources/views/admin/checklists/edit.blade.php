@@ -17,7 +17,7 @@
               @csrf
 
               <div class="form-group mb-2">
-                  <label for="form-label">Edificio</label>
+                  <label for="form-label">Hotel</label>
                   <select name="edificio_id" id="edificio_id" class="form-select">
                       @foreach ($edificios as $edificio)
                           <option value="{{ $edificio->id }}" {{ $checklist->edificio_id == $edificio->id ? 'selected' : '' }}>{{ $edificio->nombre }}</option>

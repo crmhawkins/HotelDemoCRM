@@ -25,7 +25,7 @@
         <form action="{{ route('admin.limpiezaFondo.update', $limpieza->id) }}" method="POST" class="mb-4">
           @csrf
             <div class="form-grup mb-5">
-              <label for="form-label">Apartamento</label>
+              <label for="form-label">Habitación</label>
               <select class="form-select" name="apartamento_id" id="apartamento_id">
                 @if ($apartamentos)
                   @foreach ($apartamentos as $apartamento)
@@ -43,7 +43,7 @@
               <label for="form-label">Fecha</label>
                 <input type="date" class="form-control" name="clave" value="{{$limpieza->fecha}}">
             </div>
-              <button type="submit" class="btn bg-color-primero">Actualizar Edificio</button>
+              <button type="submit" class="btn bg-color-primero">Actualizar Limpieza</button>
         </form>
 
         </div>

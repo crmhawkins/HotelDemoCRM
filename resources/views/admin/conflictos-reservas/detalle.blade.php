@@ -42,10 +42,10 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-3">
-                    <strong class="text-muted d-block mb-1">Apartamento</strong>
+                    <strong class="text-muted d-block mb-1">Habitación</strong>
                     <span class="fs-5">
                         <i class="fas fa-home me-1"></i>
-                        {{ $apartamento->nombre ?? 'Apartamento #' . $conflicto->apartamento_id }}
+                        {{ $apartamento->nombre ?? 'Habitación #' . $conflicto->apartamento_id }}
                     </span>
                 </div>
                 <div class="col-md-3">
@@ -115,7 +115,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-muted fw-semibold">Apartamento</td>
+                                <td class="text-muted fw-semibold">Habitación</td>
                                 <td>
                                     {{ $reserva->apartamento->nombre ?? 'N/A' }}
                                 </td>

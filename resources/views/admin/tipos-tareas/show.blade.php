@@ -158,7 +158,7 @@
                         </div>
                         <div class="card-body">
                             <div class="mb-2">
-                                <label class="form-label fw-bold">Requiere Apartamento:</label>
+                                <label class="form-label fw-bold">Requiere Habitación:</label>
                                 <p class="form-control-plaintext">
                                     @if($tiposTarea->requiere_apartamento)
                                         <span class="badge bg-info">

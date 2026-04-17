@@ -1303,8 +1303,8 @@
                                 <input type="text" 
                                        class="form-control" 
                                        name="host_nombre" 
-                                       value="{{ \App\Models\Setting::get('host_nombre', 'Apartamentos Algeciras') }}"
-                                       placeholder="Ej: Apartamentos Algeciras">
+                                       value="{{ \App\Models\Setting::get('host_nombre', 'Habitaciones Algeciras') }}"
+                                       placeholder="Ej: Habitaciones Algeciras">
                                 <small class="form-text">Nombre que aparece en la sección "Gestionado por"</small>
                             </div>
                             

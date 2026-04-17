@@ -852,7 +852,7 @@
         if (faltantes > 0) {
             // Popup simple: faltan checks
             Swal.fire({
-                title: '¡No has revisado todos los tics del apartamento!',
+                title: '¡No has revisado todos los tics de la habitación!',
                 text: 'Faltan ' + faltantes + ' elementos por revisar',
                 icon: 'warning',
                 showCancelButton: true,
@@ -1135,7 +1135,7 @@
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p class="mb-3">¿Estás seguro de que quieres finalizar la limpieza del apartamento?</p>
+                            <p class="mb-3">¿Estás seguro de que quieres finalizar la limpieza de la habitación?</p>
                             <div class="alert alert-success">
                                 <i class="fas fa-check-double"></i>
                                 Todos los checklists han sido completados correctamente.
@@ -1184,7 +1184,7 @@
                                 <strong>Finalización con Checklists Incompletos</strong>
                             </div>
                             
-                            <p class="mb-3">¿Estás seguro de que quieres finalizar la limpieza del apartamento?</p>
+                            <p class="mb-3">¿Estás seguro de que quieres finalizar la limpieza de la habitación?</p>
                             
                             <div class="alert alert-info">
                                 <i class="fas fa-info-circle"></i>

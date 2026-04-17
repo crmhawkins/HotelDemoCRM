@@ -68,13 +68,13 @@
                     <div class="info-label"><i class="fas fa-tag"></i> Tipo de Elemento</div>
                     <div class="info-value">
                         <span class="badge bg-{{ $incidencia->tipo === 'apartamento' ? 'primary' : 'info' }}">
-                            {{ $incidencia->tipo === 'apartamento' ? 'Apartamento' : 'Zona Común' }}
+                            {{ $incidencia->tipo === 'apartamento' ? 'Habitación' : 'Zona Común' }}
                         </span>
                     </div>
                 </div>
                 @if($incidencia->apartamento)
                 <div class="info-item">
-                    <div class="info-label"><i class="fas fa-building"></i> Apartamento</div>
+                    <div class="info-label"><i class="fas fa-building"></i> Habitación</div>
                     <div class="info-value">{{ $incidencia->apartamento->nombre }}</div>
                 </div>
                 @endif

@@ -11,7 +11,7 @@
     }
 </style>
 <div class="container-fluid">
-    <h2 class="mb-3">{{ __('Limpieza Apartamento') }}</h2>
+    <h2 class="mb-3">{{ __('Limpieza Habitación') }}</h2>
     <a href="{{route('admin.limpiezaFondo.create')}}" class="btn bg-color-quinto">Crear limpieza</a>
     <hr class="mb-5">
     <div class="row justify-content-center">
@@ -25,7 +25,7 @@
             <!-- Formulario de búsqueda -->
             <form action="{{ route('admin.limpiezaFondo.index') }}" method="GET" class="mb-4">
                 <div class="input-group mb-5">
-                    <input type="text" class="form-control" name="search" placeholder="Buscar Apartamento" value="{{ request()->get('search') }}">
+                    <input type="text" class="form-control" name="search" placeholder="Buscar Habitación" value="{{ request()->get('search') }}">
                     <button type="submit" class="btn bg-color-primero">Buscar</button>
                 </div>
             </form>
@@ -37,7 +37,7 @@
                         <th scope="col">
                             <a href="{{ route('admin.limpiezaFondo.index', ['sort' => 'apartamento_id', 'order' => request('order', 'asc') == 'asc' ? 'desc' : 'asc', 'search' => request('search')]) }}"
                                class="{{ request('sort') == 'apartamento_id' ? 'active-sort' : 'inactive-sort' }}">
-                                Apartamento
+                                Habitación
                                 @if (request('sort') == 'apartamento_id')
                                     <i class="fa {{ request('order', 'asc') == 'asc' ? 'fa-arrow-up' : 'fa-arrow-down' }}"></i>
                                 @endif
@@ -74,7 +74,7 @@
                             </tr>
                         @endforeach
                     @else
-                        <h5>No hay apartamentos para limpieza a fondo</h5>
+                        <h5>No hay habitaciones para limpieza a fondo</h5>
                     @endif
                 </tbody>
             </table>

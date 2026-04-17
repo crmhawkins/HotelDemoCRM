@@ -69,7 +69,7 @@
                     <div class="info-value">
                         <span class="badge bg-{{ $incidencia->tipo === 'apartamento' ? 'primary' : 'info' }}">
                             <i class="fas fa-{{ $incidencia->tipo === 'apartamento' ? 'building' : 'users' }}"></i>
-                            {{ $incidencia->tipo === 'apartamento' ? 'Apartamento' : 'Zona Común' }}
+                            {{ $incidencia->tipo === 'apartamento' ? 'Habitación' : 'Zona Común' }}
                         </span>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                 <div class="info-item">
                     <div class="info-label">
                         <i class="fas fa-building"></i>
-                        Apartamento
+                        Habitación
                     </div>
                     <div class="info-value">{{ $incidencia->apartamento->nombre }}</div>
                 </div>

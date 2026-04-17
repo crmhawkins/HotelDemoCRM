@@ -55,14 +55,14 @@
             @method('PUT')
             
             <div class="row g-3">
-                <!-- Apartamento -->
+                <!-- Habitación -->
                 <div class="col-md-6">
                     <label for="apartamento_id" class="form-label fw-semibold">
                         <i class="fas fa-building text-primary me-1"></i>
-                        Apartamento
+                        Habitación
                     </label>
                     <select class="form-select form-select-lg {{ $errors->has('apartamento_id') ? 'is-invalid' : '' }}" name="apartamento_id" id="apartamento_id">
-                        <option value="">Seleccione un apartamento</option>
+                        <option value="">Seleccione una habitación</option>
                         @foreach($apartamentos as $apartamento)
                             <option value="{{ $apartamento->id }}"
                                 {{ (old('apartamento_id', $reserva->apartamento_id) == $apartamento->id) ? 'selected' : '' }}>

@@ -296,7 +296,7 @@
                     <thead>
                         <tr style="background: #F2F2F7;">
                             <th style="font-size:13px; font-weight:600; color:#1D1D1F;">Fecha entrada</th>
-                            <th style="font-size:13px; font-weight:600; color:#1D1D1F;">Apartamento</th>
+                            <th style="font-size:13px; font-weight:600; color:#1D1D1F;">Habitación</th>
                             <th style="font-size:13px; font-weight:600; color:#1D1D1F;">Huesped principal</th>
                             <th style="font-size:13px; font-weight:600; color:#1D1D1F;">N. personas</th>
                             <th style="font-size:13px; font-weight:600; color:#1D1D1F;">Estado MIR</th>

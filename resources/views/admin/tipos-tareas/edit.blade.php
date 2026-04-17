@@ -244,10 +244,10 @@
                                                value="1" 
                                                {{ old('requiere_apartamento', $tiposTarea->requiere_apartamento) ? 'checked' : '' }}>
                                         <label class="form-check-label" for="requiere_apartamento">
-                                            Requiere Apartamento
+                                            Requiere Habitación
                                         </label>
                                     </div>
-                                    <small class="form-text text-muted">Esta tarea debe asignarse a un apartamento específico</small>
+                                    <small class="form-text text-muted">Esta tarea debe asignarse a una habitación específica</small>
                                 </div>
                                 
                                 <div class="mb-3">

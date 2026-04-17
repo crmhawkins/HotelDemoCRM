@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Gestión de Apartamentos')
+@section('title', 'Gestión de Habitaciones')
 
 @section('content')
 <div class="container-fluid">
@@ -11,13 +11,13 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-building me-2 text-primary"></i>
-                        Gestión de Apartamentos
+                        Gestión de Habitaciones
                     </h1>
-                    <p class="text-muted mb-0">Gestiona todos los apartamentos y propiedades del sistema</p>
+                    <p class="text-muted mb-0">Gestiona todas las habitaciones y propiedades del sistema</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('apartamentos.admin.create') }}" class="btn btn-primary btn-lg">
-                        <i class="fas fa-plus me-2"></i>Crear Apartamento
+                        <i class="fas fa-plus me-2"></i>Crear Habitación
                     </a>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div class="card-body text-center">
                     <i class="fas fa-building fa-2x mb-2"></i>
                     <h4 class="mb-1">{{ $apartamentos->total() }}</h4>
-                    <small>Total Apartamentos</small>
+                    <small>Total Habitaciones</small>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <div class="card-body text-center">
                     <i class="fas fa-building fa-2x mb-2"></i>
                     <h4 class="mb-1">{{ $edificios->count() }}</h4>
-                    <small>Edificios</small>
+                    <small>Hoteles</small>
                 </div>
             </div>
         </div>
@@ -77,10 +77,10 @@
                 <div class="row g-3">
                     <div class="col-md-4">
                         <label for="apartamento_id" class="form-label fw-semibold">
-                            <i class="fas fa-home me-1 text-primary"></i>Apartamento
+                            <i class="fas fa-home me-1 text-primary"></i>Habitación
                         </label>
                         <select class="form-select" name="apartamento_id" id="apartamento_id">
-                            <option value="">Todos los apartamentos</option>
+                            <option value="">Todas las habitaciones</option>
                             @foreach($apartamentoslist as $apartamento)
                                 <option value="{{ $apartamento->id }}"
                                     {{ request()->get('apartamento_id') == $apartamento->id ? 'selected' : '' }}>
@@ -92,10 +92,10 @@
 
                     <div class="col-md-4">
                         <label for="edificio_id" class="form-label fw-semibold">
-                            <i class="fas fa-building me-1 text-primary"></i>Edificio
+                            <i class="fas fa-building me-1 text-primary"></i>Hotel
                         </label>
                         <select name="edificio_id" id="edificio_id" class="form-select">
-                            <option value="">Todos los edificios</option>
+                            <option value="">Todos los hoteles</option>
                             @foreach ($edificios as $edificio)
                                 <option value="{{ $edificio->id }}" {{ request()->get('edificio_id') == $edificio->id ? 'selected' : '' }}>
                                     {{ $edificio->nombre }}
@@ -294,12 +294,12 @@
                                         <div class="btn-group" role="group">
                                             <a href="{{ route('apartamentos.admin.show', $apartamento->id) }}" 
                                                class="btn btn-sm btn-outline-primary" 
-                                               title="Ver apartamento">
+                                               title="Ver habitación">
                                                 <i class="fas fa-eye"></i>
                                             </a>
                                             <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" 
                                                class="btn btn-sm btn-outline-warning" 
-                                               title="Editar apartamento">
+                                               title="Editar habitación">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                             @if($apartamento->id_channex)
@@ -312,7 +312,7 @@
                                             @endif
                                             <button type="button" 
                                                     class="btn btn-sm btn-outline-danger" 
-                                                    title="Eliminar apartamento"
+                                                    title="Eliminar habitación"
                                                     onclick="confirmarEliminacion({{ $apartamento->id }}, '{{ $apartamento->titulo ?? $apartamento->nombre }}')">
                                                 <i class="fas fa-trash"></i>
                                             </button>

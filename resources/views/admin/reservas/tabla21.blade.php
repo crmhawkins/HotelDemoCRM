@@ -225,7 +225,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th colspan="2">Apartamentos</th>
+                        <th colspan="2">Habitaciones</th>
                         @for ($day = 1; $day <= $daysInMonth; $day++)
                             @php
                                 $fechaHoy = \Carbon\Carbon::now(); // Obtener la fecha actual

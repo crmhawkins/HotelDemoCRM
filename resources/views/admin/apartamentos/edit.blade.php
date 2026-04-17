@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Editar Apartamento')
+@section('title', 'Editar Habitación')
 
 @section('content')
 <div class="container-fluid">
@@ -11,9 +11,9 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-edit me-2 text-warning"></i>
-                        Editar Apartamento
+                        Editar Habitación
                     </h1>
-                    <p class="text-muted mb-0">Modifica la información del apartamento y sincroniza los cambios con Channex</p>
+                    <p class="text-muted mb-0">Modifica la información de la habitación y sincroniza los cambios con Channex</p>
                 </div>
                 <div class="d-flex gap-2">
                     <a href="{{ route('apartamentos.admin.index') }}" class="btn btn-outline-secondary btn-lg">
@@ -106,10 +106,10 @@
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label for="edificio_id" class="form-label fw-semibold">
-                                        <i class="fas fa-building me-1 text-primary"></i>Edificio <span class="text-danger">*</span>
+                                        <i class="fas fa-building me-1 text-primary"></i>Hotel <span class="text-danger">*</span>
                                     </label>
                                     <select name="edificio_id" id="edificio_id" class="form-select @error('edificio_id') is-invalid @enderror" required>
-                                        <option value="">Selecciona un edificio</option>
+                                        <option value="">Selecciona un hotel</option>
                                         @if (count($edificios) > 0)
                                             @foreach ($edificios as $edificio)
                                                 <option value="{{ $edificio->id }}" {{ old('edificio_id', $apartamento->edificio_id) == $edificio->id ? 'selected' : '' }}>
@@ -136,7 +136,7 @@
                                            id="nombre" 
                                            name="nombre" 
                                            value="{{ old('nombre', $apartamento->nombre) }}"
-                                           placeholder="Nombre interno del apartamento">
+                                           placeholder="Nombre interno de la habitación">
                                     @error('nombre')
                                         <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
@@ -155,7 +155,7 @@
                                            id="claves"
                                            name="claves"
                                            value="{{ old('claves', $apartamento->claves) }}"
-                                           placeholder="Claves del apartamento"
+                                           placeholder="Claves de la habitación"
                                            required>
                                     @error('claves')
                                         <div class="invalid-feedback">
@@ -165,7 +165,7 @@
                                 </div>
                             </div>
 
-                            <!-- Tipo de cerradura del apartamento -->
+                            <!-- Tipo de cerradura de la habitación -->
                             <div class="col-md-6 mb-3">
                                 <div class="form-group">
                                     <label class="form-label fw-semibold">
@@ -257,7 +257,7 @@
                                            id="address" 
                                            name="address" 
                                            value="{{ old('address', $apartamento->address) }}"
-                                           placeholder="Dirección completa del apartamento"
+                                           placeholder="Dirección completa de la habitación"
                                            required>
                                     @error('address')
                                         <div class="invalid-feedback">
@@ -277,7 +277,7 @@
                                            id="city" 
                                            name="city" 
                                            value="{{ old('city', $apartamento->city) }}"
-                                           placeholder="Ciudad del apartamento"
+                                           placeholder="Ciudad de la habitación"
                                            required>
                                     @error('city')
                                         <div class="invalid-feedback">
@@ -316,7 +316,7 @@
                                            id="country" 
                                            name="country" 
                                            value="{{ old('country', $apartamento->country ?? 'Spain') }}"
-                                           placeholder="País del apartamento"
+                                           placeholder="País de la habitación"
                                            required>
                                     @error('country')
                                         <div class="invalid-feedback">
@@ -437,11 +437,11 @@
                             </div>
                         </div>
 
-                        <!-- Detalles del Apartamento -->
+                        <!-- Detalles de la Habitación -->
                         <div class="row mb-4">
                             <div class="col-12">
                                 <h6 class="text-primary mb-3 fw-semibold">
-                                    <i class="fas fa-bed me-2"></i>Detalles del Apartamento
+                                    <i class="fas fa-bed me-2"></i>Detalles de la Habitación
                                 </h6>
                             </div>
                             
@@ -545,7 +545,7 @@
                                               id="description" 
                                               name="description" 
                                               rows="4"
-                                              placeholder="Descripción detallada del apartamento">{{ old('description', $apartamento->description) }}</textarea>
+                                              placeholder="Descripción detallada de la habitación">{{ old('description', $apartamento->description) }}</textarea>
                                     @error('description')
                                         <div class="invalid-feedback">
                                             <i class="fas fa-exclamation-triangle me-1"></i>{{ $message }}
@@ -558,7 +558,7 @@
                         {{-- Campos Booking.com - Reglas y Políticas (VISIBLE PRIMERO) --}}
                         @include('admin.apartamentos.partials.booking-fields')
                         
-                        <!-- Servicios del Apartamento -->
+                        <!-- Servicios de la Habitación -->
                         @include('admin.apartamentos.partials.servicios-select')
                         
                         <!-- Gestión de Fotos -->
@@ -837,7 +837,7 @@
                     </div>
                     
                     <div class="info-group mb-3">
-                        <label class="form-label fw-semibold text-muted">Edificio</label>
+                        <label class="form-label fw-semibold text-muted">Hotel</label>
                         <div class="info-value">
                             {{ $apartamento->edificio->nombre ?? 'No asignado' }}
                         </div>
@@ -889,7 +889,7 @@
                     @else
                         <div class="alert alert-warning border-0">
                             <i class="fas fa-exclamation-triangle me-2"></i>
-                            <small>Este apartamento no está sincronizado con Channex</small>
+                            <small>Esta habitación no está sincronizada con Channex</small>
                         </div>
                     @endif
                 </div>
@@ -909,7 +909,7 @@
                         </a>
                         
                         <a href="{{ route('apartamentos.admin.index') }}" class="btn btn-outline-secondary">
-                            <i class="fas fa-list me-2"></i>Lista de Apartamentos
+                            <i class="fas fa-list me-2"></i>Lista de Habitaciones
                         </a>
                         
                         @if($apartamento->id_channex)

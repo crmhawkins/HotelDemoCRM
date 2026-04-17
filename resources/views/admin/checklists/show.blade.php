@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="bg-light p-3 rounded">
-                                <h6 class="fw-semibold text-dark mb-2">Edificio Asignado</h6>
+                                <h6 class="fw-semibold text-dark mb-2">Hotel Asignado</h6>
                                 <div class="d-flex align-items-center">
                                     <i class="fas fa-building me-2 text-info"></i>
                                     <span class="fw-semibold text-dark">{{ $checklist->edificio->nombre }}</span>

@@ -120,7 +120,7 @@
                                        required>
                                 <label for="tipo_apartamento">
                                     <i class="fas fa-building"></i>
-                                    Apartamento
+                                    Habitación
                                 </label>
                             </div>
                             
@@ -153,9 +153,9 @@
                     <!-- Apartamentos -->
                     <div id="apartamentosSection" style="display: {{ $incidencia->tipo === 'apartamento' ? 'block' : 'none' }};">
                         <div class="form-group">
-                            <label for="apartamento_id" class="form-label">Selecciona el Apartamento</label>
+                            <label for="apartamento_id" class="form-label">Selecciona la Habitación</label>
                             <select class="form-select" id="apartamento_id" name="apartamento_id">
-                                <option value="">Selecciona un apartamento</option>
+                                <option value="">Selecciona una habitación</option>
                                 @foreach($apartamentos as $apartamento)
                                     <option value="{{ $apartamento->id }}" {{ old('apartamento_id', $incidencia->apartamento_id) == $apartamento->id ? 'selected' : '' }}>
                                         {{ $apartamento->nombre }}
@@ -594,7 +594,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (tipo && tipo.value === 'apartamento' && !apartamentoId) {
             e.preventDefault();
-            alert('Por favor selecciona un apartamento');
+            alert('Por favor selecciona una habitación');
             return false;
         }
         

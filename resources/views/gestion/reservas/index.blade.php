@@ -181,10 +181,10 @@
                         <div class="col-md-5">
                             <label for="apartamentoBusqueda" class="form-label fw-semibold">
                                 <i class="fas fa-home me-2"></i>
-                                Filtrar por Apartamento
+                                Filtrar por Habitación
                             </label>
                             <select class="form-control" id="apartamentoBusqueda">
-                                <option value="">Todos los apartamentos</option>
+                                <option value="">Todas las habitaciones</option>
                             </select>
                         </div>
                         <div class="col-md-2 d-flex align-items-end">
@@ -1194,7 +1194,7 @@ async function cargarApartamentos() {
             return;
         }
         
-        select.innerHTML = '<option value="">Todos los apartamentos</option>';
+        select.innerHTML = '<option value="">Todas las habitaciones</option>';
         
         if (Array.isArray(apartamentos)) {
             apartamentos.forEach(apartamento => {
@@ -1390,7 +1390,7 @@ function mostrarResultadosBusqueda(reservas, terminoBusqueda) {
                                 </div>
                                 <div class="reserva-info">
                                     <h5 style="color: #007AFF; font-weight: 700;">${reserva.codigo_reserva || 'N/A'}</h5>
-                                    <p class="reserva-apartamento">Apartamento ID: ${reserva.apartamento_id || 'N/A'}</p>
+                                    <p class="reserva-apartamento">Habitación ID: ${reserva.apartamento_id || 'N/A'}</p>
                                 </div>
                                 <div class="reserva-status">
                                     <span class="badge bg-primary">✅ Encontrada</span>
@@ -1480,7 +1480,7 @@ function actualizarSeccionReservas(tipo, reservas) {
                     </div>
                     <div class="reserva-info">
                         <h5>${reserva.codigo_reserva || 'N/A'}</h5>
-                        <p class="reserva-apartamento">${reserva.apartamento?.nombre || 'Apartamento ID: ' + (reserva.apartamento_id || 'N/A')}</p>
+                        <p class="reserva-apartamento">${reserva.apartamento?.nombre || 'Habitación ID: ' + (reserva.apartamento_id || 'N/A')}</p>
                     </div>
                     <div class="reserva-status">
                         <span class="badge bg-${tipo === 'entrada' ? 'success' : tipo === 'salida' ? 'danger' : 'warning'}">${tipo.charAt(0).toUpperCase() + tipo.slice(1)}</span>
@@ -1539,7 +1539,7 @@ function actualizarFiltrosActivos(fecha, apartamentoId, terminoBusqueda) {
     if (fecha && fecha.trim() !== '') filtros.push(`Fecha: ${new Date(fecha).toLocaleDateString('es-ES')}`);
     if (apartamentoId && apartamentoId.trim() !== '') {
         const apartamento = apartamentos.find(a => a.id == apartamentoId);
-        if (apartamento) filtros.push(`Apartamento: ${apartamento.nombre}`);
+        if (apartamento) filtros.push(`Habitación: ${apartamento.nombre}`);
     }
     if (terminoBusqueda && terminoBusqueda.trim() !== '') filtros.push(`Búsqueda: "${terminoBusqueda}"`);
     

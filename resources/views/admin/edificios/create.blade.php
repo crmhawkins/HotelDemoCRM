@@ -9,9 +9,9 @@
                 <div>
                     <h1 class="h2 mb-1 text-dark fw-bold">
                         <i class="fas fa-plus-circle me-2 text-primary"></i>
-                        Nuevo Edificio
+                        Nuevo Hotel
                     </h1>
-                    <p class="text-muted mb-0">Crea un nuevo edificio para la plataforma</p>
+                    <p class="text-muted mb-0">Crea un nuevo hotel para la plataforma</p>
                 </div>
                 <a href="{{ route('admin.edificios.index') }}" class="btn btn-outline-secondary">
                     <i class="fas fa-arrow-left me-2"></i>Volver
@@ -27,7 +27,7 @@
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-semibold text-dark">
                         <i class="fas fa-building me-2 text-primary"></i>
-                        Información del Edificio
+                        Información del Hotel
                     </h5>
                 </div>
                 
@@ -35,11 +35,11 @@
                     <form action="{{ route('admin.edificio.store') }}" method="POST" id="edificio-form">
                         @csrf
                         
-                        <!-- Nombre del edificio -->
+                        <!-- Nombre del hotel -->
                         <div class="mb-4">
                             <label for="nombre" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-signature me-2 text-primary"></i>
-                                Nombre del Edificio
+                                Nombre del Hotel
                             </label>
                             <input type="text" 
                                    class="form-control @error('nombre') is-invalid @enderror" 
@@ -83,7 +83,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Clave única para identificar el edificio en el sistema
+                                Clave única para identificar el hotel en el sistema
                             </div>
                         </div>
 
@@ -109,7 +109,7 @@
                             </div>
                         </div>
 
-                        <!-- Tipo de cerradura principal (puerta edificio) -->
+                        <!-- Tipo de cerradura principal (puerta hotel) -->
                         <div class="mb-4">
                             <label class="form-label fw-semibold text-dark">
                                 <i class="fas fa-door-open me-2 text-primary"></i>
@@ -138,19 +138,19 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Tipo de cerradura de la puerta principal del edificio
+                                Tipo de cerradura de la puerta principal del hotel
                             </div>
                         </div>
 
                         <div class="mb-4" id="tuyalaravel-building-section" style="{{ in_array($valorTipoCerradura, ['ttlock', 'tuya']) ? '' : 'display:none;' }}">
                             <label for="tuyalaravel_building_id" class="form-label fw-semibold text-dark">
                                 <i class="fas fa-link me-2 text-primary"></i>
-                                ID Edificio en App Cerraduras
+                                ID Hotel en App Cerraduras
                             </label>
                             <input type="number" class="form-control" id="tuyalaravel_building_id" name="tuyalaravel_building_id" placeholder="ID del building en Tuyalaravel" value="{{ old('tuyalaravel_building_id') }}">
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                ID del edificio en la app gestora de cerraduras (Tuyalaravel)
+                                ID del hotel en la app gestora de cerraduras (Tuyalaravel)
                             </div>
                         </div>
 
@@ -186,7 +186,7 @@
                             </div>
                             <div class="form-text">
                                 <i class="fas fa-info-circle me-1 text-muted"></i>
-                                Si está activado, las reservas de este edificio se enviarán automáticamente al sistema MIR cuando estén listas
+                                Si está activado, las reservas de este hotel se enviarán automáticamente al sistema MIR cuando estén listas
                             </div>
                         </div>
 
@@ -194,7 +194,7 @@
                         <div class="d-flex gap-3 pt-3">
                             <button type="submit" class="btn btn-primary btn-lg px-4" id="submit-btn">
                                 <i class="fas fa-save me-2"></i>
-                                Crear Edificio
+                                Crear Hotel
                             </button>
                             <a href="{{ route('admin.edificios.index') }}" class="btn btn-outline-secondary btn-lg px-4">
                                 <i class="fas fa-times me-2"></i>
@@ -210,7 +210,7 @@
                 <div class="card-body p-4">
                     <h6 class="fw-semibold text-dark mb-3">
                         <i class="fas fa-lightbulb me-2 text-warning"></i>
-                        Consejos para crear edificios
+                        Consejos para crear hoteles
                     </h6>
                     <ul class="list-unstyled mb-0">
                         <li class="mb-2">
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
             Swal.fire({
                 icon: 'warning',
                 title: 'Campo requerido',
-                text: 'Primero debes ingresar el nombre del edificio',
+                text: 'Primero debes ingresar el nombre del hotel',
                 confirmButtonColor: '#6c757d'
             });
         }
@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', function () {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creando...';
         
         Swal.fire({
-            title: 'Creando edificio...',
+            title: 'Creando hotel...',
             text: 'Por favor espera mientras se procesa la información',
             allowOutsideClick: false,
             didOpen: () => {

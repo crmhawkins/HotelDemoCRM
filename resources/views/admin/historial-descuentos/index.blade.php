@@ -36,7 +36,7 @@
                             </select>
                         </div>
                         <div class="col-md-2">
-                            <label for="apartamento" class="form-label">Apartamento ID</label>
+                            <label for="apartamento" class="form-label">Habitación ID</label>
                             <input type="number" class="form-control" id="apartamento" name="apartamento" value="{{ request('apartamento') }}">
                         </div>
                         <div class="col-md-2">
@@ -130,7 +130,7 @@
                                 <thead class="table-dark">
                                     <tr>
                                         <th>ID</th>
-                                        <th>Apartamento</th>
+                                        <th>Habitación</th>
                                         <th>Tarifa</th>
                                         <th>Descuento</th>
                                         <th>Precio Final</th>
@@ -266,10 +266,10 @@ function verDatosMomento(historialId) {
                 <div style="text-align: left; font-size: 14px;">
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
                         <div>
-                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-building me-2"></i>Información del Edificio</h6>
+                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-building me-2"></i>Información del Hotel</h6>
                             <ul style="list-style: none; padding: 0;">
                                 <li><strong>Nombre:</strong> ${datos.edificio.nombre}</li>
-                                <li><strong>Total Apartamentos:</strong> ${datos.edificio.total_apartamentos}</li>
+                                <li><strong>Total Habitaciones:</strong> ${datos.edificio.total_apartamentos}</li>
                             </ul>
                             
                             <h6 style="color: #007bff; margin: 15px 0 10px 0;"><i class="fas fa-cog me-2"></i>Configuración Aplicada</h6>
@@ -281,7 +281,7 @@ function verDatosMomento(historialId) {
                         </div>
                         
                         <div>
-                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-home me-2"></i>Información del Apartamento</h6>
+                            <h6 style="color: #007bff; margin-bottom: 10px;"><i class="fas fa-home me-2"></i>Información de la Habitación</h6>
                             <ul style="list-style: none; padding: 0;">
                                 <li><strong>Nombre:</strong> ${datos.apartamento.nombre}</li>
                                 <li><strong>ID Channex:</strong> ${datos.apartamento.id_channex || 'N/A'}</li>

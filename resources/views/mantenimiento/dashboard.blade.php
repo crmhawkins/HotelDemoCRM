@@ -21,12 +21,12 @@
         </div>
     </div>
 
-    <!-- 1. Apartamentos limpiados hoy (primero) -->
+    <!-- 1. Habitaciones limpiadas hoy (primero) -->
     <div class="apple-card">
         <div class="apple-card-header">
             <div class="apple-card-title">
                 <i class="fas fa-broom"></i>
-                <span>Apartamentos limpiados hoy</span>
+                <span>Habitaciones limpiadas hoy</span>
             </div>
         </div>
         <div class="apple-card-body">
@@ -60,9 +60,9 @@
                         </a>
                     @endforeach
                 </div>
-                <p class="text-muted small mt-2 mb-0">Pulsa en un apartamento para ver todo el detalle de la limpieza (checklist, fotos, etc.).</p>
+                <p class="text-muted small mt-2 mb-0">Pulsa en una habitación para ver todo el detalle de la limpieza (checklist, fotos, etc.).</p>
             @else
-                <p class="text-muted mb-0">No hay apartamentos limpiados hoy.</p>
+                <p class="text-muted mb-0">No hay habitaciones limpias hoy.</p>
             @endif
         </div>
     </div>

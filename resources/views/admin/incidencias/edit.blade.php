@@ -92,7 +92,7 @@
                                     <label for="tipo" class="form-label fw-semibold">Tipo *</label>
                                     <select class="form-select @error('tipo') is-invalid @enderror" 
                                             id="tipo" name="tipo" required>
-                                        <option value="apartamento" {{ old('tipo', $incidencia->tipo) == 'apartamento' ? 'selected' : '' }}>Apartamento</option>
+                                        <option value="apartamento" {{ old('tipo', $incidencia->tipo) == 'apartamento' ? 'selected' : '' }}>Habitación</option>
                                         <option value="zona_comun" {{ old('tipo', $incidencia->tipo) == 'zona_comun' ? 'selected' : '' }}>Zona Común</option>
                                     </select>
                                     @error('tipo')
@@ -114,10 +114,10 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="apartamento_id" class="form-label fw-semibold">Apartamento</label>
-                                    <select class="form-select @error('apartamento_id') is-invalid @enderror" 
+                                    <label for="apartamento_id" class="form-label fw-semibold">Habitación</label>
+                                    <select class="form-select @error('apartamento_id') is-invalid @enderror"
                                             id="apartamento_id" name="apartamento_id">
-                                        <option value="">Seleccionar apartamento</option>
+                                        <option value="">Seleccionar habitación</option>
                                         @foreach(\App\Models\Apartamento::orderBy('nombre')->get() as $apartamento)
                                             <option value="{{ $apartamento->id }}" 
                                                     {{ old('apartamento_id', $incidencia->apartamento_id) == $apartamento->id ? 'selected' : '' }}>

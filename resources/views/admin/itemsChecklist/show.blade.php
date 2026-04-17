@@ -220,7 +220,7 @@
                 <div class="card-header bg-white border-0 py-3">
                     <h5 class="mb-0 fw-semibold text-dark">
                         <i class="fas fa-building me-2 text-primary"></i>
-                        Apartamentos Asociados
+                        Habitaciones Asociadas
                     </h5>
                 </div>
                 <div class="card-body p-0">
@@ -229,7 +229,7 @@
                             <table class="table table-hover mb-0">
                                 <thead class="table-light">
                                     <tr>
-                                        <th class="border-0 py-3 px-4">Apartamento</th>
+                                        <th class="border-0 py-3 px-4">Habitación</th>
                                         <th class="border-0 py-3 px-4">Estado</th>
                                         <th class="border-0 py-3 px-4">Última Verificación</th>
                                         <th class="border-0 py-3 px-4 text-center">Acciones</th>
@@ -244,7 +244,7 @@
                                                         <i class="fas fa-home text-info"></i>
                                                     </div>
                                                     <div>
-                                                        <h6 class="mb-0 fw-semibold text-dark">{{ $apartamento->nombre ?? 'Apartamento #' . $apartamento->id }}</h6>
+                                                        <h6 class="mb-0 fw-semibold text-dark">{{ $apartamento->nombre ?? 'Habitación #' . $apartamento->id }}</h6>
                                                         <small class="text-muted">
                                                             @if($apartamento->pivot->status)
                                                                 Estado: {{ $apartamento->pivot->status }}
@@ -277,7 +277,7 @@
                                                 <div class="btn-group" role="group">
                                                     <button type="button" 
                                                             class="btn btn-sm btn-outline-primary" 
-                                                            title="Ver apartamento">
+                                                            title="Ver habitación">
                                                         <i class="fas fa-eye"></i>
                                                     </button>
                                                 </div>
@@ -292,8 +292,8 @@
                             <div class="mb-3">
                                 <i class="fas fa-building fa-3x text-muted"></i>
                             </div>
-                            <h5 class="text-muted mb-2">No hay apartamentos</h5>
-                            <p class="text-muted mb-3">Este item no está asociado a ningún apartamento.</p>
+                            <h5 class="text-muted mb-2">No hay habitaciones</h5>
+                            <p class="text-muted mb-3">Este item no está asociado a ninguna habitación.</p>
                         </div>
                     @endif
                 </div>
@@ -337,7 +337,7 @@
                             <div class="text-center p-3 bg-warning-subtle rounded">
                                 <i class="fas fa-home fa-2x text-warning mb-2"></i>
                                 <h3 class="mb-1 fw-bold text-warning">{{ $item->apartamentos->count() }}</h3>
-                                <small class="text-muted">Apartamentos</small>
+                                <small class="text-muted">Habitaciones</small>
                             </div>
                         </div>
                     </div>

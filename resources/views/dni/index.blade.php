@@ -631,7 +631,7 @@
     <header class="portal-header">
         <div class="portal-header-content">
             <div class="portal-logo">
-                <img src="{{ asset('LOGO-HAWKINS.png') }}" alt="Apartamentos Hawkins" style="max-width: 100%; height: auto;">
+                <img src="{{ asset('LOGO-HAWKINS.png') }}" alt="Hawkins Hotels" style="max-width: 100%; height: auto;">
             </div>
             <div class="language-selector">
                 <select id="languageSelect" class="language-select">
@@ -766,7 +766,7 @@
             
             <div class="footer-section">
                 <h4>Sobre Nosotros</h4>
-                <p>Apartamentos Hawkins</p>
+                <p>Hawkins Hotels</p>
                 <p>Alojamientos turísticos en Algeciras</p>
                 <p>
                     <a href="https://www.apartamentosalgeciras.com" target="_blank">
@@ -791,7 +791,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; {{ date('Y') }} Apartamentos Hawkins. Todos los derechos reservados.</p>
+            <p>&copy; {{ date('Y') }} Hawkins Hotels. Todos los derechos reservados.</p>
             <p style="margin-top: var(--spacing-xs);">
                 Protegemos tus datos según el RGPD y la legislación española vigente.
             </p>

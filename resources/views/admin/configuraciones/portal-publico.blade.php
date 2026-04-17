@@ -37,8 +37,8 @@
                     <input type="text" 
                            class="form-control @error('host_nombre') is-invalid @enderror" 
                            name="host_nombre" 
-                           value="{{ old('host_nombre', \App\Models\Setting::get('host_nombre', 'Apartamentos Algeciras')) }}"
-                           placeholder="Ej: Apartamentos Algeciras">
+                           value="{{ old('host_nombre', \App\Models\Setting::get('host_nombre', 'Habitaciones Algeciras')) }}"
+                           placeholder="Ej: Habitaciones Algeciras">
                     @error('host_nombre')
                         <div class="invalid-feedback">
                             <i class="fas fa-exclamation-circle me-1"></i>{{ $message }}

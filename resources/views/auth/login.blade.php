@@ -426,7 +426,7 @@
                     </div>
                     <h1 class="title">Acceder al Sistema</h1>
                     <p class="subtitle">
-                        Gestión integral de apartamentos turísticos
+                        Gestión integral de habitaciones y hoteles
                     </p>
                 </div>
 

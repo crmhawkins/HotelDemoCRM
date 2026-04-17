@@ -34,7 +34,7 @@
                                    id="pregunta" 
                                    name="pregunta" 
                                    value="{{ old('pregunta') }}"
-                                   placeholder="Ej: ¿Cuánto cuesta alojarse en este apartamento?"
+                                   placeholder="Ej: ¿Cuánto cuesta alojarse en esta habitación?"
                                    required>
                             @error('pregunta')
                                 <div class="invalid-feedback">{{ $message }}</div>

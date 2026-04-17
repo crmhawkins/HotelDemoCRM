@@ -1,7 +1,7 @@
 @extends('layouts.appPersonal')
 
 @section('title')
-{{ __('Realizando el Apartamento - ') . $apartamentoLimpieza->apartamento->nombre}}
+{{ __('Realizando la Habitación - ') . $apartamentoLimpieza->apartamento->nombre}}
 @endsection
 
 @section('bienvenido')
@@ -15,7 +15,7 @@
             <div class="card">
                 <div class="card-header bg-color-segundo">
                     <i class="fa-solid fa-spray-can-sparkles"></i>
-                    <span class="ms-2 text-uppercase fw-bold">{{ __('Apartamento - ') .  $apartamentoLimpieza->apartamento->nombre}}</span>
+                    <span class="ms-2 text-uppercase fw-bold">{{ __('Habitación - ') .  $apartamentoLimpieza->apartamento->nombre}}</span>
                 </div>
                 <div class="card-body">
                     <form action="{{route('gestion.store')}}" method="POST">
