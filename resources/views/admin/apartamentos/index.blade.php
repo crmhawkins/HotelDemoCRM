@@ -125,12 +125,12 @@
             <div class="d-flex justify-content-between align-items-center">
                 <h5 class="mb-0 fw-semibold text-dark">
                     <i class="fas fa-list me-2 text-primary"></i>
-                    Lista de Apartamentos
+                    Lista de Habitaciones
                 </h5>
                 <div class="d-flex gap-2">
                     <span class="badge bg-primary px-3 py-2">
                         <i class="fas fa-info-circle me-1"></i>
-                        {{ $apartamentos->count() }} de {{ $apartamentos->total() }} apartamentos
+                        {{ $apartamentos->count() }} de {{ $apartamentos->total() }} habitaciones
                     </span>
                 </div>
             </div>

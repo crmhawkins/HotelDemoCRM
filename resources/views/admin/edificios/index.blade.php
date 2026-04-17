@@ -1,5 +1,7 @@
 @extends('layouts.appAdmin')
 
+@section('title', 'Gestión de Hoteles')
+
 @section('content')
 <div class="container-fluid">
     <!-- Header con estadísticas -->
