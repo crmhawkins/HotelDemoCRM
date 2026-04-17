@@ -437,76 +437,38 @@
                         </div>
                     @endif
 
-                    {{-- Acceso estándar: certificado HawCert --}}
-                    <p class="subtitle" style="margin-bottom: 1.25rem;">Suba su certificado o use una clave de acceso.</p>
-
-                    <form method="POST" action="{{ route('hawcert.login-with-certificate') }}" enctype="multipart/form-data" id="hawcertCertForm">
+                    <form method="POST" action="{{ route('login') }}" id="loginForm">
                         @csrf
                         <div class="form-group">
-                            <label for="certificate" class="form-label">Certificado (archivo .pem, .crt o .cer)</label>
-                            <input type="file" id="certificate" name="certificate" class="form-input @error('certificate') error @enderror" accept=".pem,.crt,.cer,application/x-pem-file,application/x-x509-ca-cert" style="padding: 0.75rem 1rem;">
-                            @error('certificate')
-                                <div class="error-message">{{ $message }}</div>
-                            @enderror
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <input type="email" id="email" name="email" class="form-input @error('email') error @enderror" value="{{ old('email') }}" placeholder="tu@email.com" required autocomplete="email">
+                            </div>
+                            @error('email')<div class="error-message">{{ $message }}</div>@enderror
                         </div>
-                        <button type="submit" class="btn btn-primary" id="hawcertSubmitBtn">
-                            <span class="btn-text">Acceder con certificado</span>
+                        <div class="form-group">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <div class="input-wrapper">
+                                <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><circle cx="12" cy="16" r="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <input type="password" id="password" name="password" class="form-input @error('password') error @enderror" placeholder="••••••••" required autocomplete="current-password">
+                            </div>
+                            @error('password')<div class="error-message">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <label class="form-check-label" for="remember">Mantener sesión activa</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span class="btn-text">Iniciar Sesión</span>
                             <span class="btn-spinner" style="display: none;"></span>
                         </button>
                     </form>
-
-                    <p class="subtitle" style="margin: 1rem 0 0.5rem; font-size: 0.8rem;">O si tiene una clave de acceso de un solo uso:</p>
-                    <form method="POST" action="{{ route('hawcert.validate-key') }}" id="hawcertKeyForm">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" id="hawcert_key" name="key" class="form-input @error('key') error @enderror" placeholder="ak_..." value="{{ old('key') }}" maxlength="51" style="padding-left: 1rem;">
-                            @error('key')
-                                <div class="error-message">{{ $message }}</div>
-                            @enderror
+                    @if (Route::has('password.request'))
+                        <div style="margin-top: 0.75rem; text-align: center;">
+                            <a href="{{ route('password.request') }}" style="font-size: 0.8rem; color: var(--primary);">¿Olvidó su contraseña?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: auto; padding: 0.5rem 1rem;">Validar clave</button>
-                    </form>
-
-                    <div class="footer" style="margin-top: 1.5rem; padding-top: 1rem;">
-                        <button type="button" class="login-fallback-toggle" id="loginFallbackToggle" style="background: none; border: none; color: var(--gray-500); font-size: 0.8rem; cursor: pointer; text-decoration: underline;">
-                            Si falla el certificado: iniciar sesión con usuario y contraseña
-                        </button>
-                    </div>
-
-                    <div id="loginFallbackPanel" style="display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--gray-200);">
-                        <form method="POST" action="{{ route('login') }}" id="loginForm">
-                            @csrf
-                            <div class="form-group">
-                                <label for="email" class="form-label">Correo Electrónico</label>
-                                <div class="input-wrapper">
-                                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                                    <input type="email" id="email" name="email" class="form-input @error('email') error @enderror" value="{{ old('email') }}" placeholder="tu@email.com" required autocomplete="email">
-                                </div>
-                                @error('email')<div class="error-message">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="form-group">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <div class="input-wrapper">
-                                    <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><circle cx="12" cy="16" r="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                                    <input type="password" id="password" name="password" class="form-input @error('password') error @enderror" placeholder="••••••••" required autocomplete="current-password">
-                                </div>
-                                @error('password')<div class="error-message">{{ $message }}</div>@enderror
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="remember">Mantener sesión activa</label>
-                            </div>
-                            <button type="submit" class="btn btn-primary" id="submitBtn">
-                                <span class="btn-text">Iniciar Sesión</span>
-                                <span class="btn-spinner" style="display: none;"></span>
-                            </button>
-                        </form>
-                        @if (Route::has('password.request'))
-                            <div style="margin-top: 0.75rem;">
-                                <a href="{{ route('password.request') }}" style="font-size: 0.8rem; color: var(--primary);">¿Olvidó su contraseña?</a>
-                            </div>
-                        @endif
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -525,31 +487,6 @@
                             if (btnSpinner) btnSpinner.style.display = 'inline-block';
                         });
                     }
-                }
-
-                const hawcertCertForm = document.getElementById('hawcertCertForm');
-                if (hawcertCertForm) {
-                    const hawcertSubmitBtn = document.getElementById('hawcertSubmitBtn');
-                    if (hawcertSubmitBtn) {
-                        hawcertCertForm.addEventListener('submit', function() {
-                            hawcertSubmitBtn.disabled = true;
-                            const t = hawcertSubmitBtn.querySelector('.btn-text');
-                            const s = hawcertSubmitBtn.querySelector('.btn-spinner');
-                            if (t) t.style.display = 'none';
-                            if (s) s.style.display = 'inline-block';
-                        });
-                    }
-                }
-
-                const loginFallbackToggle = document.getElementById('loginFallbackToggle');
-                const loginFallbackPanel = document.getElementById('loginFallbackPanel');
-                if (loginFallbackToggle && loginFallbackPanel) {
-                    if (document.querySelector('#loginForm .error-message')) {
-                        loginFallbackPanel.style.display = 'block';
-                    }
-                    loginFallbackToggle.addEventListener('click', function() {
-                        loginFallbackPanel.style.display = loginFallbackPanel.style.display === 'none' ? 'block' : 'none';
-                    });
                 }
 
                 document.querySelectorAll('.form-input').forEach(function(input) {
