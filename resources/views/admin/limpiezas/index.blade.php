@@ -67,7 +67,7 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                        Apartamentos Hoy
+                                        Habitaciones Hoy
                                     </div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">
                                         {{ $apartamentosHoy }}
@@ -153,7 +153,7 @@
                                 </select>
                             </div>
                             <div class="col-md-2">
-                                <label for="apartamento" class="form-label">Apartamento/Zona Común</label>
+                                <label for="apartamento" class="form-label">Habitación/Zona Común</label>
                                 <select class="form-control" id="apartamento" name="apartamento">
                                     <option value="">Todos</option>
                                     <option value="zona_comun" {{ $filtros['apartamento'] == 'zona_comun' ? 'selected' : '' }}>
@@ -295,7 +295,7 @@
                                                     </span>
                                                 @else
                                                     <span class="badge zona-apartamento-tipo-badge">
-                                                        <i class="fas fa-home me-1"></i> Apartamento
+                                                        <i class="fas fa-home me-1"></i> Habitación
                                                     </span>
                                                 @endif
                                             </td>

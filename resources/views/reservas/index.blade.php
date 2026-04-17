@@ -211,7 +211,7 @@
                 <div class="col-md-2">
                     <label for="filtro_apartamento" class="form-label fw-semibold">
                         <i class="fas fa-building text-primary me-1"></i>
-                        Apartamento
+                        Habitación
                     </label>
                     <select class="form-select" name="filtro_apartamento" id="filtro_apartamento">
                         <option value="">Todos</option>
@@ -291,7 +291,7 @@
                             <th scope="col" class="border-0">
                                 <a href="{{ route('reservas.index', ['order_by' => 'apartamento_id', 'direction' => (request()->get('order_by') == 'apartamento_id' ? $orderDirection : 'asc'), 'search' => request()->get('search'),'perPage' => request()->get('perPage'), 'fecha_entrada' => request()->get('fecha_entrada'), 'fecha_salida' => request()->get('fecha_salida')]) }}" 
                                    class="text-decoration-none text-dark fw-semibold">
-                                    <i class="fas fa-building text-primary me-1"></i>Apartamento
+                                    <i class="fas fa-building text-primary me-1"></i>Habitación
                                     @if(request()->get('order_by') == 'apartamento_id')
                                         @if(request()->get('direction') == 'asc')
                                             <i class="fas fa-sort-up text-primary"></i>
@@ -911,7 +911,7 @@
             <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="modalOcupacionLabel">
                     <i class="fas fa-calendar-check me-2"></i>
-                    Ocupación de Apartamentos - Hoy
+                    Ocupación de Habitaciones - Hoy
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -932,7 +932,7 @@
                                         <strong>Fecha Consulta:</strong> <span id="fechaEntrada"></span>
                                     </div>
                                     <div class="col-md-4">
-                                        <strong>Apartamentos:</strong> <span id="apartamentoNombre"></span>
+                                        <strong>Habitaciones:</strong> <span id="apartamentoNombre"></span>
                                     </div>
                                     <div class="col-md-4">
                                         <strong>Estado:</strong> <span class="text-success fw-bold">Ocupación Actual</span>
@@ -950,7 +950,7 @@
                             <div class="card-header bg-light">
                                 <h6 class="mb-0">
                                     <i class="fas fa-building text-primary me-2"></i>
-                                    Estado de Ocupación por Apartamento
+                                    Estado de Ocupación por Habitación
                                 </h6>
                             </div>
                             <div class="card-body p-0">
@@ -960,7 +960,7 @@
                                             <tr>
                                                 <th class="border-0">
                                                     <i class="fas fa-building text-primary me-2"></i>
-                                                    Apartamento
+                                                    Habitación
                                                 </th>
                                                 <th class="border-0">
                                                     <i class="fas fa-info-circle text-primary me-2"></i>

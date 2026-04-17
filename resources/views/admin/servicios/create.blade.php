@@ -8,7 +8,7 @@
                 <i class="fas fa-plus me-2 text-primary"></i>
                 Nuevo Servicio
             </h1>
-            <p class="text-muted mb-0">Crea un nuevo servicio que se podrá asignar a los apartamentos</p>
+            <p class="text-muted mb-0">Crea un nuevo servicio que se podrá asignar a las habitaciones</p>
         </div>
         <a href="{{ route('admin.servicios.index') }}" class="btn btn-secondary">
             <i class="fas fa-arrow-left me-2"></i>
@@ -256,8 +256,8 @@
                         <strong>¿Qué son los servicios?</strong>
                     </p>
                     <p class="small text-muted">
-                        Los servicios son características y comodidades que tiene un apartamento (Wifi, Aire acondicionado, Cocina, etc.). 
-                        Puedes crear servicios globales y luego asignarlos a cada apartamento según corresponda.
+                        Los servicios son características y comodidades que tiene una habitación (Wifi, Aire acondicionado, Cocina, etc.).
+                        Puedes crear servicios globales y luego asignarlos a cada habitación según corresponda.
                     </p>
                     <hr>
                     <p class="card-text">

@@ -1,6 +1,6 @@
 @extends('layouts.appAdmin')
 
-@section('title', 'Estadísticas del Apartamento')
+@section('title', 'Estadísticas de la Habitación')
 
 @section('content')
 <div class="container-fluid">
@@ -8,13 +8,13 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <div>
             <h1 class="font-titulo mb-2">
-                <i class="fas fa-chart-line me-2"></i>Estadísticas del Apartamento
+                <i class="fas fa-chart-line me-2"></i>Estadísticas de la Habitación
             </h1>
             <p class="text-secondary mb-0">Análisis detallado del rendimiento y métricas de {{ $apartamento->titulo ?? $apartamento->nombre }}</p>
         </div>
         <div class="d-flex gap-2">
             <a href="{{ route('apartamentos.admin.show', $apartamento->id) }}" class="btn btn-secondary">
-                <i class="fas fa-arrow-left me-2"></i>Volver al Apartamento
+                <i class="fas fa-arrow-left me-2"></i>Volver a la Habitación
             </a>
             <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" class="btn btn-primary">
                 <i class="fas fa-edit me-2"></i>Editar
@@ -255,7 +255,7 @@
                             </div>
                         </div>
                     @else
-                        <p class="text-muted mb-0">No hay tarifas configuradas para este apartamento.</p>
+                        <p class="text-muted mb-0">No hay tarifas configuradas para esta habitación.</p>
                     @endif
                 </div>
             </div>

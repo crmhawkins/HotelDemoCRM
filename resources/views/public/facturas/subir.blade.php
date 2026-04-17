@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Subir factura - Apartamentos Algeciras</title>
+    <title>Subir factura - Hotel Algeciras</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -173,7 +173,7 @@
         </form>
 
         <p class="footer-note">
-            Apartamentos Algeciras<br>
+            Hotel Algeciras<br>
             Tamano maximo: 10 MB. Formatos: JPG, PNG, WEBP, HEIC, PDF.
         </p>
     </div>

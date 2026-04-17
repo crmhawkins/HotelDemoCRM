@@ -375,7 +375,7 @@
                         <strong class="text-dark">#{{ $checklist->id }}</strong>
                     </div>
                     <div class="mb-3">
-                        <small class="text-muted d-block">Edificio ID</small>
+                        <small class="text-muted d-block">Hotel ID</small>
                         <strong class="text-dark">#{{ $checklist->edificio_id }}</strong>
                     </div>
                     <div class="mb-3">

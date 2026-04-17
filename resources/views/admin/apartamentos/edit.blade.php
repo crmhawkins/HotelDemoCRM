@@ -795,7 +795,7 @@
                                         <i class="fas fa-times me-2"></i>Cancelar
                                     </a>
                                     <button type="submit" class="btn btn-warning btn-lg">
-                                        <i class="fas fa-save me-2"></i>Actualizar Apartamento
+                                        <i class="fas fa-save me-2"></i>Actualizar Habitación
                                     </button>
                                 </div>
                             </div>

@@ -223,7 +223,7 @@
                         
                         @if($tarifa->apartamentos->count() > 0)
                             <div class="mb-3">
-                                <strong>Apartamentos asignados ({{ $tarifa->apartamentos->count() }}):</strong>
+                                <strong>Habitaciones asignadas ({{ $tarifa->apartamentos->count() }}):</strong>
                                 <div class="apartamentos-list">
                                     @foreach($tarifa->apartamentos->take(3) as $apartamento)
                                         <div class="apartamento-item">
@@ -241,7 +241,7 @@
                             <div class="mb-3">
                                 <span class="text-muted">
                                     <i class="fas fa-info-circle me-1"></i>
-                                    No hay apartamentos asignados
+                                    No hay habitaciones asignadas
                                 </span>
                             </div>
                         @endif
@@ -284,7 +284,7 @@
                 <div class="text-center py-5">
                     <i class="fas fa-tags fa-3x text-muted mb-3"></i>
                     <h4 class="text-muted">No hay tarifas creadas</h4>
-                    <p class="text-muted">Comienza creando tu primera tarifa para gestionar los precios de tus apartamentos.</p>
+                    <p class="text-muted">Comienza creando tu primera tarifa para gestionar los precios de tus habitaciones.</p>
                     <a href="{{ route('tarifas.create') }}" class="btn-modern">
                         <i class="fas fa-plus me-2"></i>Crear Primera Tarifa
                     </a>

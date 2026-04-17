@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', __('legal.frequently_asked_questions') . ' - Apartamentos Algeciras')
+@section('title', __('legal.frequently_asked_questions') . ' - Hotel Algeciras')
 
 @section('styles')
 <style>

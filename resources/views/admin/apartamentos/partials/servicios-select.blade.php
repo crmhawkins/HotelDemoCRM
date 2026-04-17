@@ -4,13 +4,13 @@
         <div class="card-header bg-primary text-white py-2">
             <h6 class="mb-0 fw-semibold">
                 <i class="fas fa-concierge-bell me-2"></i>
-                Servicios del Apartamento
+                Servicios de la Habitación
             </h6>
         </div>
         <div class="card-body">
             <div class="alert alert-info mb-3">
                 <i class="fas fa-info-circle me-2"></i>
-                <strong>Servicios:</strong> Selecciona los servicios que tiene este apartamento. 
+                <strong>Servicios:</strong> Selecciona los servicios que tiene esta habitación.
                 Puedes gestionar los servicios disponibles desde <a href="{{ route('admin.servicios.index') }}" target="_blank" class="alert-link">Servicios</a>.
             </div>
 

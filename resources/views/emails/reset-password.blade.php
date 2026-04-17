@@ -29,7 +29,7 @@ Por tu seguridad, este enlace solo puede ser usado una vez. Si necesitas restabl
 
 ---
 
-**Hawkins Suite** - Gestión integral de apartamentos turísticos
+**Hawkins Suite** - Gestión integral de habitaciones turísticas
 
 <small>Este es un correo automático, por favor no respondas a este mensaje.</small>
 @endcomponent

@@ -5,7 +5,7 @@
             <h5 class="text-primary mb-2 fw-semibold">
                 <i class="fas fa-gavel me-2"></i>Reglas y Políticas
             </h5>
-            <p class="mb-0 text-muted">Define las reglas de la casa y la política de cancelación para este apartamento</p>
+            <p class="mb-0 text-muted">Define las reglas de la casa y la política de cancelación para esta habitación</p>
         </div>
     </div>
     

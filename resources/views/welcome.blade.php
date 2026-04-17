@@ -502,7 +502,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title fade-in-up">
-                        Gestión Integral de Apartamentos Turísticos
+                        Gestión Integral de Habitaciones Turísticas
                     </h1>
                     <p class="hero-subtitle fade-in-up-delay-1">
                         Plataforma profesional para la administración completa de propiedades turísticas. 
@@ -535,7 +535,7 @@
                     <h2 class="section-title">¿Por qué elegir Hawkins Suite?</h2>
                     <p class="section-subtitle">
                         Nuestra plataforma ofrece herramientas avanzadas diseñadas específicamente para 
-                        la gestión eficiente de apartamentos turísticos
+                        la gestión eficiente de habitaciones turísticas
                     </p>
                 </div>
                 
@@ -631,7 +631,7 @@
                 <h2 class="cta-title">¿Listo para transformar tu negocio?</h2>
                 <p class="cta-subtitle">
                     Únete a cientos de propietarios que ya confían en Hawkins Suite 
-                    para gestionar sus apartamentos turísticos de manera profesional.
+                    para gestionar sus habitaciones turísticas de manera profesional.
                 </p>
                 @if (Route::has('login'))
                     @auth
@@ -653,7 +653,7 @@
                 <div class="footer-content">
                     <div class="footer-section">
                         <h3>Hawkins Suite</h3>
-                        <p>Plataforma líder en gestión de apartamentos turísticos. 
+                        <p>Plataforma líder en gestión de habitaciones turísticas.
                            Herramientas profesionales para optimizar tu negocio.</p>
                     </div>
                     

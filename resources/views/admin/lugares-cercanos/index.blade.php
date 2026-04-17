@@ -12,7 +12,7 @@
         </div>
         <div class="d-flex gap-2">
             <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" class="btn btn-secondary btn-lg">
-                <i class="fas fa-arrow-left me-2"></i>Volver al Apartamento
+                <i class="fas fa-arrow-left me-2"></i>Volver a la Habitación
             </a>
             @if($lugares->isNotEmpty())
                 <form action="{{ route('admin.lugares-cercanos.borrar-todos', $apartamento->id) }}" 

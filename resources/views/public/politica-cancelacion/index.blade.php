@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', $politica->titulo . ' - Apartamentos Algeciras')
+@section('title', $politica->titulo . ' - Hotel Algeciras')
 
 @section('styles')
 <style>

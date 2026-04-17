@@ -420,7 +420,7 @@
 {{-- Modal: Select apartment/zone --}}
 <div class="modal-panel" id="modalSelect">
     <div class="modal-box">
-        <h5 id="modalTitle">Seleccionar apartamento</h5>
+        <h5 id="modalTitle">Seleccionar habitación</h5>
         <select id="modalSelectField">
             <option value="">-- Seleccionar --</option>
         </select>
@@ -546,7 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var reqZona = dt.getData('requiere_zona_comun') === '1';
 
         if (reqApt) {
-            showModal('Seleccionar apartamento', apartamentos, 'titulo', function(selectedId) {
+            showModal('Seleccionar habitación', apartamentos, 'titulo', function(selectedId) {
                 agregarTarea(turnoId, tipoTareaId, selectedId, null);
             });
         } else if (reqZona) {

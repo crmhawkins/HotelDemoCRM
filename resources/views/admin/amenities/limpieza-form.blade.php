@@ -108,7 +108,7 @@
 @else
     <div class="alert alert-info">
         <i class="fas fa-info-circle me-2"></i>
-        No hay amenities configurados para este edificio.
+        No hay amenities configurados para este hotel.
     </div>
 @endif
 

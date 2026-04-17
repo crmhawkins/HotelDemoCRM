@@ -12,8 +12,8 @@
     @if($seoMeta && $seoMeta->active)
         {!! render_seo_meta_tags($routeName) !!}
     @else
-        <title>@yield('title', 'Apartamentos Algeciras')</title>
-        <meta name="description" content="@yield('description', 'Reserva apartamentos turísticos en Algeciras. Mejores precios, ubicación céntrica y todas las comodidades.')">
+        <title>@yield('title', 'Hotel Algeciras')</title>
+        <meta name="description" content="@yield('description', 'Reserva habitaciones de hotel en Algeciras. Mejores precios, ubicación céntrica y todas las comodidades.')">
     @endif
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -460,7 +460,7 @@
                 <!-- Primera columna: Logo -->
                 <div>
                     <a href="{{ route('web.index') }}" class="booking-top-header-logo">
-                        <img src="{{ asset('LOGO-HAWKINS.png') }}" alt="Apartamentos Algeciras">
+                        <img src="{{ asset('LOGO-HAWKINS.png') }}" alt="Hotel Algeciras">
                     </a>
                 </div>
                 
@@ -610,7 +610,7 @@
             </p>
             <div style="margin-top: 24px;">
                 <img src="{{ asset('images/logo-apartamentos.jpeg') }}"
-                     alt="Logo Apartamentos"
+                     alt="Logo Hotel"
                      style="max-width: 600px; width: 100%; height: auto; display: block; margin: 0 auto;"
                      onerror="this.style.display='none';">
             </div>

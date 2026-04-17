@@ -1478,12 +1478,12 @@
                 <div class="config-card-header">
                     <h5>
                         <i class="fas fa-door-open"></i>
-                        Método de Entrada por Bloque (Edificio)
+                        Método de Entrada por Bloque (Hotel)
                     </h5>
                 </div>
                 <div class="config-card-body">
                     <p class="text-muted mb-4">
-                        Define si cada edificio entrega acceso con cerradura <strong>física</strong> o <strong>digital</strong>.
+                        Define si cada hotel entrega acceso con cerradura <strong>física</strong> o <strong>digital</strong>.
                         El modo digital queda preparado pero <strong>pendiente de integración</strong> con la plataforma que generará códigos únicos por cliente y ventanas horarias.
                     </p>
 
@@ -1497,7 +1497,7 @@
                                         <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
                                             <div>
                                                 <div class="fw-semibold text-dark">
-                                                    {{ $edificio->nombre ?? ('Edificio #' . $edificio->id) }}
+                                                    {{ $edificio->nombre ?? ('Hotel #' . $edificio->id) }}
                                                 </div>
                                                 <div class="small text-muted">
                                                     Clave: {{ $edificio->clave ?? '—' }}

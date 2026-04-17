@@ -258,7 +258,7 @@
                 </div>
                 <div class="flex-grow-1 ms-3">
                     <h5 class="alert-heading fw-bold mb-2">Coordenadas requeridas</h5>
-                    <p class="mb-2">El apartamento debe tener latitud y longitud configuradas para poder buscar lugares cercanos automáticamente.</p>
+                    <p class="mb-2">La habitación debe tener latitud y longitud configuradas para poder buscar lugares cercanos automáticamente.</p>
                     <a href="{{ route('apartamentos.admin.edit', $apartamento->id) }}" 
                        class="btn btn-danger">
                         <i class="fas fa-map-marker-alt me-2"></i>Configurar Coordenadas
@@ -273,7 +273,7 @@
                 <div>
                     <div class="d-flex align-items-center mb-2">
                         <i class="fas fa-map-marker-alt me-2" style="color: #007AFF; font-size: 20px;"></i>
-                        <strong class="text-dark">Ubicación del Apartamento</strong>
+                        <strong class="text-dark">Ubicación de la Habitación</strong>
                     </div>
                     <div class="text-muted">
                         <i class="fas fa-globe me-1"></i>
@@ -453,7 +453,7 @@
                             </h6>
                             <p class="text-muted small mb-0">
                                 El sistema utiliza <strong>OpenStreetMap (Nominatim API)</strong> para buscar lugares cercanos. 
-                                Los resultados se filtrarán automáticamente para evitar duplicados y se calculará la distancia desde el apartamento.
+                                Los resultados se filtrarán automáticamente para evitar duplicados y se calculará la distancia desde la habitación.
                             </p>
                         </div>
                         <div class="d-flex gap-2">

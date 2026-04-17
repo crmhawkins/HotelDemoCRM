@@ -47,7 +47,7 @@
                                         <option value="">Sin reserva</option>
                                         @foreach($reservas as $reserva)
                                             <option value="{{ $reserva->id }}" {{ $invoice->reserva_id == $reserva->id ? 'selected' : '' }}>
-                                                {{ $reserva->codigo_reserva }} - {{ $reserva->apartamento->nombre ?? 'Sin apartamento' }}
+                                                {{ $reserva->codigo_reserva }} - {{ $reserva->apartamento->nombre ?? 'Sin habitación' }}
                                             </option>
                                         @endforeach
                                     </select>

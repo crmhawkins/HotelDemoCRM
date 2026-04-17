@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', 'Mi Perfil - Apartamentos Algeciras')
+@section('title', 'Mi Perfil - Hotel Algeciras')
 
 @section('content')
 <div class="booking-detail-container" style="margin-top: 40px; margin-bottom: 40px;">

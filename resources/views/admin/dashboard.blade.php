@@ -597,7 +597,7 @@
         <div class="col-md-4 rounded-4 mt-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="text-center">Distribución de Reservas por Apartamento</h2>
+                    <h2 class="text-center">Distribución de Reservas por Habitación</h2>
                     <div id="chartApartamentos"></div>
                 </div>
             </div>
@@ -647,7 +647,7 @@
         <div class="col-md-4 rounded-4 mt-3">
             <div class="card h-100">
                 <div class="card-body">
-                    <h2 class="text-center">Disponibilidad Mensual de Apartamentos</h2>
+                    <h2 class="text-center">Disponibilidad Mensual de Habitaciones</h2>
                     <div id="chartDisponibilidadMensual"></div>
                 </div>
             </div>
@@ -695,7 +695,7 @@
                     <i class="fas fa-tags fa-3x text-warning"></i>
                 </div>
                 <h5 class="card-title text-warning">Gestión de Tarifas</h5>
-                <p class="card-text">Configurar tarifas por temporada y asignar a apartamentos</p>
+                <p class="card-text">Configurar tarifas por temporada y asignar a habitaciones</p>
                 <div class="mt-3">
                     <a href="{{ route('tarifas.create') }}" class="btn btn-warning btn-sm">
                         <i class="fas fa-plus me-1"></i>Nueva Tarifa
@@ -730,11 +730,11 @@
                 <div class="mb-3">
                     <i class="fas fa-home fa-3x text-success"></i>
                 </div>
-                <h5 class="card-title text-success">Gestión de Apartamentos</h5>
-                <p class="card-text">Administrar apartamentos y sus configuraciones</p>
+                <h5 class="card-title text-success">Gestión de Habitaciones</h5>
+                <p class="card-text">Administrar habitaciones y sus configuraciones</p>
                 <div class="mt-3">
                     <a href="{{ route('apartamentos.admin.create') }}" class="btn btn-success btn-sm">
-                        <i class="fas fa-plus me-1"></i>Nuevo Apartamento
+                        <i class="fas fa-plus me-1"></i>Nueva Habitación
                     </a>
                 </div>
             </div>
@@ -824,7 +824,7 @@
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="modalLibresHoyLabel">
-                    <i class="fas fa-home me-2"></i>Apartamentos Libres Hoy
+                    <i class="fas fa-home me-2"></i>Habitaciones Libres Hoy
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
@@ -879,9 +879,9 @@
             <div class="modal-body p-4">
                 <div class="row mb-4">
                     <div class="col-md-4">
-                        <label for="filtroApartamento" class="form-label fw-bold">Filtrar por Apartamento</label>
+                        <label for="filtroApartamento" class="form-label fw-bold">Filtrar por Habitación</label>
                         <select id="filtroApartamento" class="form-select">
-                            <option value="">Todos los apartamentos</option>
+                            <option value="">Todas las habitaciones</option>
                             @foreach($apartamentos as $apartamento)
                                 <option value="{{ $apartamento->titulo }}">{{ $apartamento->titulo }}</option>
                             @endforeach
@@ -981,9 +981,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 <!-- Filtros -->
                 <div class="row mb-4">
                     <div class="col-md-3">
-                        <label for="filtroApartamentoFacturacion" class="form-label fw-bold">Apartamento:</label>
+                        <label for="filtroApartamentoFacturacion" class="form-label fw-bold">Habitación:</label>
                         <select id="filtroApartamentoFacturacion" class="form-select">
-                            <option value="">Todos los apartamentos</option>
+                            <option value="">Todas las habitaciones</option>
                             @foreach($apartamentos as $apartamento)
                                 <option value="{{ $apartamento->titulo }}">{{ $apartamento->titulo }}</option>
                             @endforeach
@@ -1439,9 +1439,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="modal-body p-4">
                 <div class="row mb-4">
                     <div class="col-md-4">
-                        <label for="filtroApartamentoNoFacturadas" class="form-label fw-bold">Filtrar por Apartamento</label>
+                        <label for="filtroApartamentoNoFacturadas" class="form-label fw-bold">Filtrar por Habitación</label>
                         <select id="filtroApartamentoNoFacturadas" class="form-select">
-                            <option value="">Todos los apartamentos</option>
+                            <option value="">Todas las habitaciones</option>
                             @foreach($apartamentos as $apartamento)
                                 <option value="{{ $apartamento->titulo }}">{{ $apartamento->titulo }}</option>
                             @endforeach

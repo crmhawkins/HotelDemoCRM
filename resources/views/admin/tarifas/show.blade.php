@@ -324,7 +324,7 @@
                     </div>
                     
                     <div class="info-section">
-                        <h5><i class="fas fa-building me-2"></i>Apartamentos Asignados ({{ $tarifa->apartamentos->count() }})</h5>
+                        <h5><i class="fas fa-building me-2"></i>Habitaciones Asignadas ({{ $tarifa->apartamentos->count() }})</h5>
                         
                         @if($tarifa->apartamentos->count() > 0)
                             <div class="apartamentos-list">
@@ -340,8 +340,8 @@
                         @else
                             <div class="text-center text-muted py-4">
                                 <i class="fas fa-building fa-2x mb-3"></i>
-                                <p>No hay apartamentos asignados a esta tarifa</p>
-                                <p class="small">Puedes asignar apartamentos editando la tarifa</p>
+                                <p>No hay habitaciones asignadas a esta tarifa</p>
+                                <p class="small">Puedes asignar habitaciones editando la tarifa</p>
                             </div>
                         @endif
                     </div>

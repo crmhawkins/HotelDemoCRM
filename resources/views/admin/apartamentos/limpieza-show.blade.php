@@ -11,9 +11,9 @@
         <div class="col-12">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <div>
-                    <h2 class="mb-1">{{ __('Resumen de Limpieza del Apartamento') }}</h2>
+                    <h2 class="mb-1">{{ __('Resumen de Limpieza de la Habitación') }}</h2>
                     <p class="text-muted mb-0">
-                        Apartamento: <strong>{{ $apartamentoLimpieza->apartamento->nombre }}</strong> | 
+                        Habitación: <strong>{{ $apartamentoLimpieza->apartamento->nombre }}</strong> |
                         @if($apartamentoLimpieza->reserva)
                             Reserva: <strong>{{ $apartamentoLimpieza->reserva->codigo_reserva ?? 'N/A' }}</strong>
                         @else

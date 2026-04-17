@@ -8,7 +8,7 @@
                 <i class="fas fa-home me-2 text-primary"></i>
                 Normas de la Casa
             </h1>
-            <p class="text-muted mb-0">Gestiona las normas de la casa para todos los apartamentos</p>
+            <p class="text-muted mb-0">Gestiona las normas de la casa para todas las habitaciones</p>
         </div>
         <a href="{{ route('admin.normas-casa.create') }}" class="btn btn-primary btn-lg">
             <i class="fas fa-plus me-2"></i>

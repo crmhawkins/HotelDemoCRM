@@ -112,7 +112,7 @@
                     <label class="form-label text-muted">Limpieza Asociada</label>
                     <p class="form-control-plaintext">
                         <i class="fas fa-home me-1"></i>
-                        {{ $movimiento->apartamentoLimpieza->apartamento->nombre ?? 'Apartamento' }} - 
+                        {{ $movimiento->apartamentoLimpieza->apartamento->nombre ?? 'Habitación' }} -
                         {{ $movimiento->apartamentoLimpieza->fecha_limpieza->format('d/m/Y') }}
                     </p>
                 </div>

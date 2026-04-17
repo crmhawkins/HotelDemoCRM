@@ -14,7 +14,7 @@
                         Detalle DNI - Reserva #{{ $reserva->id }}
                     </h1>
                     <p class="text-muted mb-0">
-                        {{ $reserva->apartamento->nombre ?? 'Apartamento' }} |
+                        {{ $reserva->apartamento->nombre ?? 'Habitación' }} |
                         {{ \Carbon\Carbon::parse($reserva->fecha_entrada)->format('d/m/Y') }} - {{ \Carbon\Carbon::parse($reserva->fecha_salida)->format('d/m/Y') }}
                     </p>
                 </div>

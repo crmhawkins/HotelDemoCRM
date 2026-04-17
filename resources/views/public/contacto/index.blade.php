@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', 'Contacto - Apartamentos Algeciras')
+@section('title', 'Contacto - Hotel Algeciras')
 
 @section('breadcrumb')
 <div class="booking-breadcrumb">
@@ -416,7 +416,7 @@
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade"
-                title="Ubicación de Apartamentos Algeciras - Calle Santísimo 2, Algeciras">
+                title="Ubicación de Hotel Algeciras - Calle Santísimo 2, Algeciras">
             </iframe>
         </div>
         <div style="text-align: center; margin-top: 12px;">

@@ -125,7 +125,7 @@
                         </div>
                         
                         <div class="row mb-3">
-                            <div class="col-md-3"><strong>Apartamento:</strong></div>
+                            <div class="col-md-3"><strong>Habitación:</strong></div>
                             <div class="col-md-9">{{ $pago->reserva->apartamento->titulo ?? 'N/A' }}</div>
                         </div>
                         

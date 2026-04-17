@@ -106,7 +106,7 @@
                                        required>
                                 <label for="tipo_apartamento">
                                     <i class="fas fa-building"></i>
-                                    Apartamento
+                                    Habitación
                                 </label>
                             </div>
                             
@@ -640,7 +640,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (tipo && tipo.value === 'apartamento' && !apartamentoId) {
                 e.preventDefault();
-                alert('Por favor selecciona un apartamento');
+                alert('Por favor selecciona una habitación');
                 return false;
             }
             

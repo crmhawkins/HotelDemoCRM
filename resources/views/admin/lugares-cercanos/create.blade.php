@@ -193,7 +193,7 @@
                     </h5>
                     <hr>
                     <p class="card-text">
-                        <strong>Apartamento:</strong><br>
+                        <strong>Habitación:</strong><br>
                         {{ $apartamento->titulo ?? $apartamento->nombre }}
                     </p>
                     <hr>

@@ -16,7 +16,7 @@
                         Gestión de Amenities - Limpieza
                     </h1>
                     <p class="text-muted mb-0">
-                        Apartamento: <strong>{{ $apartamento->nombre }}</strong> | 
+                        Habitación: <strong>{{ $apartamento->nombre }}</strong> |
                         @if($reserva)
                             Reserva: <strong>{{ $reserva->codigo_reserva ?? 'N/A' }}</strong> | 
                             {{ $reserva->numero_personas ?? 1 }} personas | 

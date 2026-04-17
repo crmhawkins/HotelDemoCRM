@@ -75,7 +75,7 @@
                     <tr>
                         <td style="background-color:#f8fafc;padding:20px 32px;border-top:1px solid #e5e7eb;">
                             <p style="font-size:13px;color:#0891b2;font-weight:700;margin:0 0 4px;">Hawkins Suites</p>
-                            <p style="font-size:11px;color:#9ca3af;margin:0;">Apartamentos Algeciras &bull; Hawkins Real State SL</p>
+                            <p style="font-size:11px;color:#9ca3af;margin:0;">Hotel Algeciras &bull; Hawkins Real State SL</p>
                         </td>
                     </tr>
                 </table>

@@ -130,7 +130,7 @@
                                     </label>
                                 </div>
                                 <small class="form-text text-muted">
-                                    Solo las normas activas se mostrarán en los apartamentos.
+                                    Solo las normas activas se mostrarán en las habitaciones.
                                 </small>
                             </div>
                         </div>

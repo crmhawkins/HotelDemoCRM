@@ -7,7 +7,7 @@
 <div class="container px-4">
     <div class="d-flex justify-content-center flex-column">
         {{-- <img src="{{asset('logo_small_azul.png')}}" alt="" class="img-fluid m-auto" style="width: 60%"> --}}
-        <h5 class="text-center mb-3 mt-3 fs-2"><strong>CRM</strong> de los Apartamentos <img src="{{asset('logo_small_azul.png')}}" alt="" style="max-width: 230px" class="img-fluid d-block m-auto mt-1"></h5>
+        <h5 class="text-center mb-3 mt-3 fs-2"><strong>CRM</strong> de las Habitaciones <img src="{{asset('logo_small_azul.png')}}" alt="" style="max-width: 230px" class="img-fluid d-block m-auto mt-1"></h5>
     </div>
     <div class="mt-5">
         <h4 class="mb-3">Acceso directos</h4>
@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <h4 class="mt-5">Apartamentos para Hoy</h4>
+    <h4 class="mt-5">Habitaciones para Hoy</h4>
 
     <div class="row mb-4">
         @if (count($reservasPendientes) > 0)
@@ -67,10 +67,10 @@
                 </div>
             @endforeach
         @else
-            <p class="">No hay apartamentos pendientes.</p>
+            <p class="">No hay habitaciones pendientes.</p>
         @endif
     </div>
-    <h4 class="mt-5">Apartamentos para Mañana</h4>
+    <h4 class="mt-5">Habitaciones para Mañana</h4>
 
     <div class="row mb-4">
         @if (count($reservasSalida) > 0)
@@ -84,7 +84,7 @@
                 </div>
             @endforeach
         @else
-            <p class="">No hay apartamentos pendientes.</p>
+            <p class="">No hay habitaciones pendientes.</p>
         @endif
     </div>
 

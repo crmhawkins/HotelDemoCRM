@@ -368,9 +368,9 @@
                                 
                                 <div class="apartamentos-section">
                                     <h5 class="mb-3">
-                                        <i class="fas fa-building me-2"></i>Apartamentos que aplican esta tarifa
+                                        <i class="fas fa-building me-2"></i>Habitaciones que aplican esta tarifa
                                     </h5>
-                                    <p class="text-muted mb-3">Selecciona los apartamentos donde se aplicará esta tarifa. Si no seleccionas ninguno, la tarifa estará disponible para asignar manualmente.</p>
+                                    <p class="text-muted mb-3">Selecciona las habitaciones donde se aplicará esta tarifa. Si no seleccionas ninguna, la tarifa estará disponible para asignar manualmente.</p>
                                     
                                     @foreach($apartamentos as $apartamento)
                                         <div class="apartamento-checkbox">

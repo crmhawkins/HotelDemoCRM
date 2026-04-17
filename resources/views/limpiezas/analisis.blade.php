@@ -79,7 +79,7 @@
                                 <thead>
                                     <tr>
                                         <th>Fecha</th>
-                                        <th>Apartamento</th>
+                                        <th>Habitación</th>
                                         <th>Empleada</th>
                                         <th>Categoría</th>
                                         <th>Calidad</th>

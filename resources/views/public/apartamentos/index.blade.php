@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', 'Habitaciones - Apartamentos Algeciras')
+@section('title', 'Habitaciones - Hotel Algeciras')
 
 @section('breadcrumb')
 <div class="booking-breadcrumb">

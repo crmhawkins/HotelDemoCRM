@@ -8,7 +8,7 @@
                 <i class="fas fa-concierge-bell me-2 text-primary"></i>
                 Servicios
             </h1>
-            <p class="text-muted mb-0">Gestiona los servicios disponibles para los apartamentos</p>
+            <p class="text-muted mb-0">Gestiona los servicios disponibles para las habitaciones</p>
         </div>
         <a href="{{ route('admin.servicios.create') }}" class="btn btn-primary btn-lg">
             <i class="fas fa-plus me-2"></i>

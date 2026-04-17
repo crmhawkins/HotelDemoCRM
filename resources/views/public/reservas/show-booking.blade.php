@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', (($apartamento->titulo ?? $apartamento->nombre) ?: '') . ' - Apartamentos Algeciras')
+@section('title', (($apartamento->titulo ?? $apartamento->nombre) ?: '') . ' - Hotel Algeciras')
 
 @section('styles')
 <style>
@@ -1788,7 +1788,7 @@
                 
                 <!-- Información del Host/Propietario -->
                 @php
-                    $hostNombre = \App\Models\Setting::get('host_nombre', 'Apartamentos Algeciras');
+                    $hostNombre = \App\Models\Setting::get('host_nombre', 'Hotel Algeciras');
                     $hostIniciales = \App\Models\Setting::get('host_iniciales', 'HA');
                     // $hostDescripcion ya viene traducido del controlador
                     if (!isset($hostDescripcion)) {

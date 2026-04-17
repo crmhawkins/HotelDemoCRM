@@ -38,7 +38,7 @@
                                 <div class="tarea-info">
                                     <div class="tarea-tipo">
                                         <i class="fas fa-home"></i>
-                                        <span class="tarea-nombre">{{ $limpieza->apartamento?->nombre ?? $limpieza->apartamento?->titulo ?? 'Apartamento #'.$limpieza->apartamento_id }}</span>
+                                        <span class="tarea-nombre">{{ $limpieza->apartamento?->nombre ?? $limpieza->apartamento?->titulo ?? 'Habitación #'.$limpieza->apartamento_id }}</span>
                                         @if($limpieza->apartamento && $limpieza->apartamento->edificioName)
                                             <small class="elemento-nombre">{{ $limpieza->apartamento->edificioName->nombre }}</small>
                                         @endif
@@ -84,7 +84,7 @@
                                 <div class="tarea-info">
                                     <div class="tarea-tipo">
                                         <i class="fas fa-key"></i>
-                                        <span class="tarea-nombre">{{ $reserva->apartamento?->nombre ?? $reserva->apartamento?->titulo ?? 'Apartamento' }}</span>
+                                        <span class="tarea-nombre">{{ $reserva->apartamento?->nombre ?? $reserva->apartamento?->titulo ?? 'Habitación' }}</span>
                                         @if($reserva->apartamento && $reserva->apartamento->edificioName)
                                             <small class="elemento-nombre">{{ $reserva->apartamento->edificioName->nombre }}</small>
                                         @endif

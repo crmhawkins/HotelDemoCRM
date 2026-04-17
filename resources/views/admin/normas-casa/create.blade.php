@@ -8,7 +8,7 @@
                 <i class="fas fa-plus me-2 text-primary"></i>
                 Nueva Norma de la Casa
             </h1>
-            <p class="text-muted mb-0">Crea una nueva norma que se aplicará a los apartamentos</p>
+            <p class="text-muted mb-0">Crea una nueva norma que se aplicará a las habitaciones</p>
         </div>
         <a href="{{ route('admin.normas-casa.index') }}" class="btn btn-secondary">
             <i class="fas fa-arrow-left me-2"></i>
@@ -129,7 +129,7 @@
                                     </label>
                                 </div>
                                 <small class="form-text text-muted">
-                                    Solo las normas activas se mostrarán en los apartamentos.
+                                    Solo las normas activas se mostrarán en las habitaciones.
                                 </small>
                             </div>
                         </div>
@@ -161,8 +161,8 @@
                         <strong>¿Qué son las normas de la casa?</strong>
                     </p>
                     <p class="small text-muted">
-                        Las normas de la casa son reglas que se aplican a todos los apartamentos (o a algunos específicos). 
-                        Estas normas se mostrarán en la página pública de cada apartamento.
+                        Las normas de la casa son reglas que se aplican a todas las habitaciones (o a algunas específicas).
+                        Estas normas se mostrarán en la página pública de cada habitación.
                     </p>
                     <hr>
                     <p class="card-text">

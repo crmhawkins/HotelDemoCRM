@@ -151,7 +151,7 @@
                         <div class="col-md-6 mb-3">
                             <label for="apartamento_limpieza_id" class="form-label">
                                 <i class="fas fa-home me-1"></i>
-                                Limpieza de Apartamento
+                                Limpieza de Habitación
                             </label>
                             <select class="form-select @error('apartamento_limpieza_id') is-invalid @enderror" 
                                     id="apartamento_limpieza_id" 
@@ -160,7 +160,7 @@
                                 @foreach($limpiezas as $limpieza)
                                     <option value="{{ $limpieza->id }}" 
                                             {{ old('apartamento_limpieza_id') == $limpieza->id ? 'selected' : '' }}>
-                                        {{ $limpieza->apartamento->nombre ?? 'Apartamento' }} - {{ $limpieza->fecha_comienzo ? $limpieza->fecha_comienzo->format('d/m/Y') : 'Sin fecha' }}
+                                        {{ $limpieza->apartamento->nombre ?? 'Habitación' }} - {{ $limpieza->fecha_comienzo ? $limpieza->fecha_comienzo->format('d/m/Y') : 'Sin fecha' }}
                                     </option>
                                 @endforeach
                             </select>

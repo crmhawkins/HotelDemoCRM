@@ -83,7 +83,7 @@
                                     <div class="incident-details">
                                         <span class="incident-type">
                                             <i class="fas fa-{{ $incidencia->tipo === 'apartamento' ? 'building' : 'users' }}"></i>
-                                            {{ $incidencia->tipo === 'apartamento' ? 'Apartamento' : 'Zona Común' }}
+                                            {{ $incidencia->tipo === 'apartamento' ? 'Habitación' : 'Zona Común' }}
                                         </span>
                                         @if($incidencia->apartamento)
                                             <span class="incident-location"><i class="fas fa-map-marker-alt"></i> {{ $incidencia->apartamento->nombre }}</span>
