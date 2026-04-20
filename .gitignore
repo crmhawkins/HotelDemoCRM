@@ -57,3 +57,6 @@ main.py
 # .env nunca al repo
 /.env
 /.env.backup
+
+# Worktrees de Claude (agente)
+.claude/worktrees/
