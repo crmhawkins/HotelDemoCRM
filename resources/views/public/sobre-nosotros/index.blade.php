@@ -227,7 +227,7 @@
         <div class="about-content-grid">
             <div>
                 <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop" 
-                     alt="Interior de habitación"
+                     alt="Interior de suite"
                      class="about-image about-image-large">
             </div>
             
@@ -319,7 +319,7 @@
             <div>
                 <div class="about-images-grid">
                     <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&h=400&fit=crop" 
-                         alt="Habitación con toallas" 
+                         alt="Suite con toallas"
                          class="about-image about-image-large">
                     <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop" 
                          alt="Vista de la ciudad" 

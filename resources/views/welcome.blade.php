@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Hawkins Suite - Habitaciones Turísticas</title>
+        <title>Hawkins Suite - Suites Turísticas</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -502,7 +502,7 @@
             <div class="container">
                 <div class="hero-content">
                     <h1 class="hero-title fade-in-up">
-                        Gestión Integral de Habitaciones Turísticas
+                        Gestión Integral de Suites Turísticas
                     </h1>
                     <p class="hero-subtitle fade-in-up-delay-1">
                         Plataforma profesional para la administración completa de propiedades turísticas. 
@@ -535,7 +535,7 @@
                     <h2 class="section-title">¿Por qué elegir Hawkins Suite?</h2>
                     <p class="section-subtitle">
                         Nuestra plataforma ofrece herramientas avanzadas diseñadas específicamente para 
-                        la gestión eficiente de habitaciones turísticas
+                        la gestión eficiente de suites turísticas
                     </p>
                 </div>
                 
@@ -631,7 +631,7 @@
                 <h2 class="cta-title">¿Listo para transformar tu negocio?</h2>
                 <p class="cta-subtitle">
                     Únete a cientos de propietarios que ya confían en Hawkins Suite 
-                    para gestionar sus habitaciones turísticas de manera profesional.
+                    para gestionar sus suites turísticas de manera profesional.
                 </p>
                 @if (Route::has('login'))
                     @auth
@@ -653,7 +653,7 @@
                 <div class="footer-content">
                     <div class="footer-section">
                         <h3>Hawkins Suite</h3>
-                        <p>Plataforma líder en gestión de habitaciones turísticas.
+                        <p>Plataforma líder en gestión de suites turísticas.
                            Herramientas profesionales para optimizar tu negocio.</p>
                     </div>
                     

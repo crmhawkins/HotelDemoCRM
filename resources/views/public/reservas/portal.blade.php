@@ -1,6 +1,6 @@
 @extends('layouts.public-booking')
 
-@section('title', 'Habitaciones Disponibles - Hotel Algeciras')
+@section('title', 'Suites Disponibles - Hotel Algeciras')
 
 @section('breadcrumb')
 @if($fechaEntrada && $fechaSalida)

@@ -32,7 +32,7 @@
 
             <div style="margin-bottom: 16px;">
                 <p style="color: #6b7280; font-size: 0.875rem; margin: 0 0 4px;">
-                    {{ __('Puerta de tu habitación') }}
+                    {{ __('Puerta de tu suite') }}
                     @if(!empty($codigosAcceso['apartamento_titulo']))
                         — <strong>{{ $codigosAcceso['apartamento_titulo'] }}</strong>
                     @endif
@@ -118,7 +118,7 @@
             // Apartment name
             ctx.fillStyle = '#0c4a6e';
             ctx.font = 'bold 22px system-ui, sans-serif';
-            ctx.fillText({!! json_encode($codigosAcceso["apartamento_titulo"] ?? "Habitación") !!}, w / 2, 150);
+            ctx.fillText({!! json_encode($codigosAcceso["apartamento_titulo"] ?? "Suite") !!}, w / 2, 150);
 
             // Dates
             ctx.fillStyle = '#6b7280';
@@ -162,7 +162,7 @@
             // Apartment code label
             ctx.fillStyle = '#6b7280';
             ctx.font = '14px system-ui, sans-serif';
-            ctx.fillText('{{ __("Puerta de tu habitación") }}', w / 2, yPos);
+            ctx.fillText('{{ __("Puerta de tu suite") }}', w / 2, yPos);
             yPos += 10;
 
             // Dashed box for apartment code
@@ -251,15 +251,15 @@
 
                     if (navigator.canShare && navigator.canShare({ files: [file] })) {
                         navigator.share({
-                            title: '{{ __("Códigos de acceso") }} - ' + {!! json_encode($codigosAcceso["apartamento_titulo"] ?? "Habitación") !!},
-                            text: '{{ __("Código habitación") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) ' | {{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif '',
+                            title: '{{ __("Códigos de acceso") }} - ' + {!! json_encode($codigosAcceso["apartamento_titulo"] ?? "Suite") !!},
+                            text: '{{ __("Código suite") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) ' | {{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif '',
                             files: [file]
                         }).catch(function(err) {
                             // User cancelled or error - try text-only share
                             if (err.name !== 'AbortError') {
                                 navigator.share({
                                     title: '{{ __("Códigos de acceso") }}',
-                                    text: '{{ __("Código habitación") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) '\n{{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif ''
+                                    text: '{{ __("Código suite") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) '\n{{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif ''
                                 }).catch(function() {});
                             }
                         });
@@ -267,7 +267,7 @@
                         // Fallback: text-only share
                         navigator.share({
                             title: '{{ __("Códigos de acceso") }}',
-                            text: '{{ __("Código habitación") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) '\n{{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif ''
+                            text: '{{ __("Código suite") }}: {{ $codigosAcceso["codigo_acceso"] }}' + @if(!empty($codigosAcceso['clave_edificio'])) '\n{{ __("Código hotel") }}: {{ $codigosAcceso["clave_edificio"] }}' + @endif ''
                         }).catch(function() {});
                     }
                 }, 'image/png');

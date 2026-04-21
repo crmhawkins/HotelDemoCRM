@@ -26,7 +26,7 @@
             </h1>
             <p style="font-size: 16px; color: #555; margin-bottom: 24px;">
                 Estamos realizando ajustes en nuestro sistema de reservas. 
-                Puedes seguir navegando por las habitaciones y consultando la información,
+                Puedes seguir navegando por las suites y consultando la información,
                 pero por ahora las nuevas reservas solo se gestionan de forma directa.
             </p>
             <p style="font-size: 16px; color: #555; margin-bottom: 32px;">
@@ -44,7 +44,7 @@
             </div>
 
             <a href="{{ route('web.reservas.portal') }}" class="apple-btn btn btn-outline-primary">
-                <i class="fas fa-arrow-left me-2"></i>Volver a ver habitaciones
+                <i class="fas fa-arrow-left me-2"></i>Volver a ver suites
             </a>
         </div>
     </div>

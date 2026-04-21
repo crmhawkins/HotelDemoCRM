@@ -8,7 +8,7 @@
         <div class="booking-breadcrumb-content">
             <a href="{{ route('web.index') }}">Inicio</a>
             <span class="booking-breadcrumb-separator">></span>
-            <a href="{{ route('web.reservas.portal') }}">Habitaciones</a>
+            <a href="{{ route('web.reservas.portal') }}">Suites</a>
             <span class="booking-breadcrumb-separator">></span>
             <a href="{{ route('web.reservas.show', $apartamento->id) }}">{{ $apartamento->titulo }}</a>
             <span class="booking-breadcrumb-separator">></span>

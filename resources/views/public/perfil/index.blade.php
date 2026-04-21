@@ -358,7 +358,7 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th>Código</th>
-                                        <th>Habitación</th>
+                                        <th>Suite</th>
                                         <th>Entrada</th>
                                         <th>Salida</th>
                                         <th>Estado</th>
