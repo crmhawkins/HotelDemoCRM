@@ -14,7 +14,11 @@ return new class extends Migration {
     {
         Schema::table('reservas', function (Blueprint $t) {
             if (!Schema::hasColumn('reservas', 'codigo_fallback_enviado')) {
-                $t->boolean('codigo_fallback_enviado')->default(false)->after('codigo_acceso_enviado');
+                $col = $t->boolean('codigo_fallback_enviado')->default(false);
+                // 'codigo_acceso_enviado' existe en produccion pero no en demo.
+                if (Schema::hasColumn('reservas', 'codigo_acceso_enviado')) {
+                    $col->after('codigo_acceso_enviado');
+                }
             }
         });
     }
