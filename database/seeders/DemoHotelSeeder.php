@@ -57,17 +57,18 @@ class DemoHotelSeeder extends Seeder
         );
         $this->command->info("  Edificio: {$edificio->nombre}");
 
-        // 2. Habitaciones (20)
-        $this->command->info('  Creando 20 habitaciones...');
+        // 2. Suites (20) — en el demo los alojamientos se llaman "suite" en el
+        // front publico. El modelo sigue siendo `Apartamento` (columna BD).
+        $this->command->info('  Creando 20 suites...');
         $nombresHab = [
-            'Habitación 101', 'Habitación 102', 'Habitación 103', 'Habitación 104',
-            'Habitación 201', 'Habitación 202', 'Habitación 203', 'Habitación 204',
-            'Habitación 301', 'Habitación 302',
+            'Suite 101', 'Suite 102', 'Suite 103', 'Suite 104',
+            'Suite 201', 'Suite 202', 'Suite 203', 'Suite 204',
+            'Suite 301', 'Suite 302',
             'Suite Mediterránea', 'Suite Costa Sol', 'Suite Vista Mar',
-            'Doble Vista Jardín', 'Doble Vista Piscina',
-            'Familiar 401', 'Familiar 402',
+            'Suite Vista Jardín', 'Suite Vista Piscina',
+            'Suite Familiar 401', 'Suite Familiar 402',
             'Junior Suite Norte', 'Junior Suite Sur',
-            'Estudio Panorámico',
+            'Suite Panorámica',
         ];
         $habitaciones = collect();
         foreach ($nombresHab as $i => $nom) {
@@ -75,6 +76,9 @@ class DemoHotelSeeder extends Seeder
                 'nombre' => $nom,
                 'titulo' => $nom,
                 'edificio_id' => $edificio->id,
+                // id_channex dummy: el portal publico filtra por whereNotNull('id_channex'),
+                // asi que sin este campo las suites no aparecen en /web/apartamentos.
+                'id_channex' => 'demo-' . str_pad((string) ($i + 1), 4, '0', STR_PAD_LEFT),
                 'currency' => 'EUR',
                 'country' => 'ES',
                 'state' => 'Málaga',
