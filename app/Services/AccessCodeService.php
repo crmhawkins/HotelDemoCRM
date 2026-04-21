@@ -175,6 +175,24 @@ class AccessCodeService
      */
     private function enviarATuyalaravel(Reserva $reserva, $lockId, string $codigo): ?string
     {
+        // [DEMO 2026-04-21] Si el modo demo esta activo (o el kill switch de
+        // tuya/ttlock lo esta), no llamamos a la app Tuyalaravel ni a las
+        // cerraduras reales. Simulamos una respuesta exitosa y guardamos el
+        // codigo como si ya estuviera programado.
+        if (\App\Services\DemoModeService::isStubbed('tuya') || \App\Services\DemoModeService::isStubbed('ttlock')) {
+            \App\Services\DemoModeService::stubResponse('tuya', 'enviarATuyalaravel', [
+                'reserva_id' => $reserva->id,
+                'lock_id'    => $lockId,
+                'codigo'     => $codigo,
+            ]);
+            $reserva->update([
+                'codigo_acceso'            => $codigo,
+                'codigo_enviado_cerradura' => 1,
+                'ttlock_pin_id'            => 'DEMO-' . $reserva->id,
+            ]);
+            return $codigo;
+        }
+
         $tuyaAppUrl = config('services.tuya_app.url');
         $efectivo = Carbon::parse($reserva->fecha_entrada)->setTime(15, 0, 0);
         $invalido = Carbon::parse($reserva->fecha_salida)->setTime(11, 0, 0);
@@ -276,6 +294,14 @@ class AccessCodeService
             return true;
         }
 
+        // [DEMO 2026-04-21] En modo demo nunca reintentamos contra cerraduras
+        // reales; marcamos como enviado y salimos.
+        if (\App\Services\DemoModeService::isStubbed('tuya') || \App\Services\DemoModeService::isStubbed('ttlock')) {
+            \App\Services\DemoModeService::stubResponse('tuya', 'reintentarOFallback', ['reserva_id' => $reserva->id]);
+            $reserva->update(['codigo_enviado_cerradura' => 1]);
+            return true;
+        }
+
         $apartamento = $reserva->apartamento;
         $tipoCerradura = $apartamento->tipo_cerradura ?? 'manual';
 
@@ -364,6 +390,14 @@ class AccessCodeService
             throw new \Exception("La reserva #{$reserva->id} no tiene código de acceso generado.");
         }
 
+        // [DEMO 2026-04-21] En modo demo marcamos como programado sin llamar
+        // a Tuyalaravel ni a la cerradura real.
+        if (\App\Services\DemoModeService::isStubbed('tuya') || \App\Services\DemoModeService::isStubbed('ttlock')) {
+            \App\Services\DemoModeService::stubResponse('tuya', 'programarEnCerradura', ['reserva_id' => $reserva->id]);
+            $reserva->update(['codigo_enviado_cerradura' => 1]);
+            return;
+        }
+
         $apartamento = $reserva->apartamento;
         $tipoCerradura = $apartamento->tipo_cerradura ?? 'manual';
 
@@ -425,6 +459,12 @@ class AccessCodeService
     public function revocarPin(Reserva $reserva): void
     {
         if (empty($reserva->ttlock_pin_id)) {
+            return;
+        }
+
+        // [DEMO 2026-04-21] En modo demo no revocamos nada en cerraduras reales.
+        if (\App\Services\DemoModeService::isStubbed('tuya') || \App\Services\DemoModeService::isStubbed('ttlock')) {
+            \App\Services\DemoModeService::stubResponse('tuya', 'revocarPin', ['reserva_id' => $reserva->id]);
             return;
         }
 

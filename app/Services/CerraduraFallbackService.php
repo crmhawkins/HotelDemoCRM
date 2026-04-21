@@ -236,6 +236,15 @@ class CerraduraFallbackService
      */
     private function enviarWhatsAppTexto(string $phone, string $texto): void
     {
+        // [DEMO 2026-04-21] En modo demo no enviamos WhatsApp real; solo log.
+        if (\App\Services\DemoModeService::isStubbed('whatsapp')) {
+            \App\Services\DemoModeService::stubResponse('whatsapp', 'enviarWhatsAppTexto_fallback', [
+                'phone' => $phone,
+                'texto' => $texto,
+            ]);
+            return;
+        }
+
         $token = \App\Models\Setting::whatsappToken();
         $url = \App\Models\Setting::whatsappUrl();
 

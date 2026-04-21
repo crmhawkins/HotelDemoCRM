@@ -52,6 +52,10 @@ return [
         'openai'   => env('DEMO_DISABLE_OPENAI', false),
         'email'    => env('DEMO_DISABLE_EMAIL', false),
         'stripe'   => env('DEMO_DISABLE_STRIPE', false),
+        // [2026-04-21] Cerraduras digitales (Tuya X7 y TTLock via Tuyalaravel).
+        // El demo no debe llamar a la app Tuyalaravel ni a las cerraduras reales.
+        'tuya'     => env('DEMO_DISABLE_TUYA', false),
+        'ttlock'   => env('DEMO_DISABLE_TTLOCK', false),
     ],
 
     /*
